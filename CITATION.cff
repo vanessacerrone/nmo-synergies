@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper and this software as below."
+type: software
+title: "nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino experiments as weighted bin averages"
+authors:
+  - family-names: Cerrone
+    given-names: Vanessa
+    affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
+  - family-names: Grassi
+    given-names: Marco
+    affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
+version: 1.2.0
+# doi: 10.5281/zenodo.XXXXXXX            # the Zenodo DOI, added at archiving
+# date-released: 2026-MM-DD             # the date of the tag, added at archiving
+license: MIT
+repository-code: "https://github.com/vanessacerrone/nmo-synergies"
+keywords:
+  - neutrino mass ordering
+  - neutrino oscillations
+  - atmospheric neutrinos
+  - reactor neutrinos
+preferred-citation:
+  type: article
+  title: "Phenomenology of neutrino mass ordering synergies in reactor, accelerator, and atmospheric neutrino experiments, and the role of the detector response"
+  authors:
+    - family-names: Cerrone
+      given-names: Vanessa
+      affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
+    - family-names: Grassi
+      given-names: Marco
+      affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
+  journal: "Journal of High Energy Physics"
+  year: 2026
+  # identifiers:                         # added when the preprint is out
+  #   - type: other
+  #     value: "arXiv:XXXX.XXXXX"

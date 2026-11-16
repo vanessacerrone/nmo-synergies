@@ -1,0 +1,23 @@
+[project]
+name = "nmosyn"
+version = "1.2.0"
+description = "Wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino experiments as weighted bin averages"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Vanessa Cerrone"}, {name = "Marco Grassi"}]
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "matplotlib", "numba", "pandas", "uproot", "iminuit"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nmosyn", "nmosyn.experiments"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

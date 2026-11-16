@@ -1,0 +1,98 @@
+# Numbers typed from publications, used with the public releases in data/external/ to build the NOvA and
+# T2K far-detector spectra (App. A.3, nmosyn/experiments/lbl_spectra.py). The source of every number is on
+# its line.
+# Event numbers are predicted (not observed) selected events of the far detector.
+
+[nova]
+baseline_km = 810.0          # NOvA, PRL 136, 011802 (2026), arXiv:2509.04361
+density = 2.84               # g/cm^3, CRUST2.0 average; NOvA, PRL 118, 231801 (2017), arXiv:1703.03328
+
+# Oscillation parameters of the predictions in the NOvA 2024 data release and in Table 2 of arXiv:2509.04361
+[nova.best_fit]
+dm32 = 2.441e-3              # eV^2, normal ordering, frequentist best fit; arXiv:2509.04361
+s23sq = 0.55                 # arXiv:2509.04361
+dcp_over_pi = 0.87           # arXiv:2509.04361
+sin2_2theta13 = 0.0851       # Daya Bay 1D constraint; README of the NOvA 2024 data release
+sin2_2theta12 = 0.851        # PDG 2019; README of the NOvA 2024 data release
+dm21 = 7.53e-5               # eV^2, PDG 2019; README of the NOvA 2024 data release
+
+# Predicted events at the best fit, arXiv:2509.04361, Table 2: nu_mu (FHC) and nubar_mu (RHC) samples, and
+# nu_e (FHC) and nubar_e (RHC) samples
+[nova.events.FHC]
+numu_mu = 372.3              # Table 2, nu_mu sample, row nu_mu -> nu_mu
+numubar_mu = 24.5            # Table 2, nu_mu sample, row nubar_mu -> nubar_mu
+numu_e = 125.3               # Table 2, nu_e sample, row nu_mu -> nu_e
+numubar_e = 1.8              # Table 2, nu_e sample, row nubar_mu -> nubar_e
+beam_e = 26.1                # Table 2, nu_e sample, row beam nu_e + nubar_e
+nc_e = 16.8                  # Table 2, nu_e sample, row NC
+cosmic_e = 5.5               # Table 2, nu_e sample, row cosmic
+other_e = 0.8                # Table 2, nu_e sample, row others
+
+[nova.events.RHC]
+numu_mu = 24.4               # Table 2, nubar_mu sample, row nu_mu -> nu_mu
+numubar_mu = 71.5            # Table 2, nubar_mu sample, row nubar_mu -> nubar_mu
+numu_e = 2.1                 # Table 2, nubar_e sample, row nu_mu -> nu_e
+numubar_e = 18.9             # Table 2, nubar_e sample, row nubar_mu -> nubar_e
+beam_e = 6.5                 # Table 2, nubar_e sample, row beam nu_e + nubar_e
+nc_e = 2.0                   # Table 2, nubar_e sample, row NC
+cosmic_e = 1.1               # Table 2, nubar_e sample, row cosmic
+other_e = 0.1                # Table 2, nubar_e sample, row others
+
+[t2k]
+baseline_km = 295.0          # T2K, PRD 103, 112008 (2021), arXiv:2101.03779, Sec. II
+density = 2.6                # g/cm^3, crust density; arXiv:2101.03779, Sec. II
+
+# Reference oscillation parameters of arXiv:2101.03779, Table III
+[t2k.reference]
+s12sq = 0.304                # Table III
+s13sq = 0.0212               # Table III
+s23sq = 0.528                # Table III
+dm32 = 2.509e-3              # eV^2, normal ordering; Table III
+dm21 = 7.53e-5               # eV^2; Table III
+
+# Predicted events per Super-Kamiokande sample at delta_CP = -pi/2, other parameters of Table III;
+# arXiv:2101.03779, Table XI. The e-like sample with one decay electron is not used.
+[t2k.events]
+dcp_over_pi = -0.5           # Table XI, row delta_CP = -pi/2
+FHC_mu = 272.4               # Table XI, FHC mu-like
+RHC_mu = 139.5               # Table XI, RHC mu-like
+FHC_e = 74.4                 # Table XI, FHC e-like
+RHC_e = 17.1                 # Table XI, RHC e-like
+
+# Hyper-Kamiokande Design Report, arXiv:1805.04163: efficiencies of the Super-Kamiokande technology
+[hyperk]
+e_like_max_gev = 1.25        # e-like selection, reconstructed energy below 1.25 GeV; Sec. III.1.A.4
+
+# Nominal oscillation parameters, Table XXXV
+[hyperk.reference]
+sin2_2theta13 = 0.10         # Table XXXV
+dcp_over_pi = 0.0            # Table XXXV
+s23sq = 0.50                 # Table XXXV
+dm32 = 2.4e-3                # eV^2, normal ordering; Table XXXV
+sin2_2theta12 = 0.8704       # Table XXXV
+dm21 = 7.6e-5                # eV^2; Table XXXV
+
+# Expected events, Tables XXXVI (nu_e/nubar_e candidates) and XXXVII (nu_mu/nubar_mu candidates)
+[hyperk.events.FHC]
+numu_e = 1643                # Table XXXVI, nu mode, signal nu_mu -> nu_e
+numubar_e = 15               # Table XXXVI, nu mode, signal nubar_mu -> nubar_e
+nue_e = 248                  # Table XXXVI, nu mode, background nu_e CC
+nuebar_e = 11                # Table XXXVI, nu mode, background nubar_e CC
+nc_e = 134                   # Table XXXVI, nu mode, background NC
+numu_ccqe_mu = 6043          # Table XXXVII, nu mode, nu_mu CCQE
+numu_ccnqe_mu = 2981         # Table XXXVII, nu mode, nu_mu CC non-QE
+numubar_ccqe_mu = 348        # Table XXXVII, nu mode, nubar_mu CCQE
+numubar_ccnqe_mu = 194       # Table XXXVII, nu mode, nubar_mu CC non-QE
+nc_mu = 480                  # Table XXXVII, nu mode, NC
+
+[hyperk.events.RHC]
+numu_e = 206                 # Table XXXVI, nubar mode, signal nu_mu -> nu_e
+numubar_e = 1183             # Table XXXVI, nubar mode, signal nubar_mu -> nubar_e
+nue_e = 101                  # Table XXXVI, nubar mode, background nu_e CC
+nuebar_e = 216               # Table XXXVI, nubar mode, background nubar_e CC
+nc_e = 196                   # Table XXXVI, nubar mode, background NC
+numu_ccqe_mu = 2699          # Table XXXVII, nubar mode, nu_mu CCQE
+numu_ccnqe_mu = 2354         # Table XXXVII, nubar mode, nu_mu CC non-QE
+numubar_ccqe_mu = 6099       # Table XXXVII, nubar mode, nubar_mu CCQE
+numubar_ccnqe_mu = 1961      # Table XXXVII, nubar mode, nubar_mu CC non-QE
+nc_mu = 603                  # Table XXXVII, nubar mode, NC

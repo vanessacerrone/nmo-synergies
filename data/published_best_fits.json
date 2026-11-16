@@ -1,0 +1,107 @@
+{
+ "note": "Published best fits of Dm31 (or Dm32) under the normal and the inverted ordering, 1 sigma, in 1e-3 eV^2, as quoted by each experiment. Errors are [lower, upper]. Where Dm32 is quoted, fig_published_best_fits uses Dm31 = Dm32 + Dm21 with the NuFIT 6.0 Dm21 (the Dm21 of the fit for the IceCube 9.3-year sample).",
+ "measurements": [
+  {
+   "label": "Daya Bay 2022",
+   "reference": "Daya Bay, PRL 130, 161802 (2023), arXiv:2211.14988",
+   "quantity": "dm32",
+   "no": [
+    2.466,
+    0.06,
+    0.06
+   ],
+   "io": [
+    -2.571,
+    0.06,
+    0.06
+   ]
+  },
+  {
+   "label": "JUNO 2026",
+   "reference": "JUNO, arXiv:2609.37895 (207 days)",
+   "quantity": "dm31",
+   "no": [
+    2.509,
+    0.025,
+    0.027
+   ],
+   "io": [
+    -2.482,
+    0.026,
+    0.025
+   ]
+  },
+  {
+   "label": "NOvA 2025",
+   "reference": "NOvA, arXiv:2509.04361, doi:10.1103/x53y-2b86; frequentist best fits of the main text (the abstract quotes the Bayesian HPD values 2.431 and -2.479)",
+   "quantity": "dm32",
+   "no": [
+    2.441,
+    0.031,
+    0.035
+   ],
+   "io": [
+    -2.481,
+    0.034,
+    0.034
+   ]
+  },
+  {
+   "label": "T2K 2024",
+   "reference": "T2K, G. Zarnecki, 'Overview of the T2K experiment', talk at HEPNP 2025 (Valparaiso, 8 January 2025), slide 43: frequentist best fit of the 21.4e20 (nu) + 16.3e20 (nu-bar) POT analysis; https://indico.global/event/8670/contributions/82766",
+   "quantity": "dm32 (NO), dm31 (IO)",
+   "no": [
+    2.521,
+    0.05,
+    0.037
+   ],
+   "io": [
+    -2.486,
+    0.044,
+    0.043
+   ]
+  },
+  {
+   "label": "T2K + NOvA 2025",
+   "reference": "T2K and NOvA, Nature (2025), arXiv:2510.19888, doi:10.1038/s41586-025-09599-3; Bayesian analysis (highest-posterior values)",
+   "quantity": "dm32",
+   "no": [
+    2.43,
+    0.03,
+    0.04
+   ],
+   "io": [
+    -2.48,
+    0.04,
+    0.03
+   ]
+  },
+  {
+   "label": "NuFIT 6.0 (global)",
+   "reference": "NuFIT 6.0, JHEP 12 (2024) 216, arXiv:2410.05380 (IC19 without SK atmospheric data)",
+   "quantity": "dm31 (NO), dm32 (IO)",
+   "no": [
+    2.534,
+    0.023,
+    0.025
+   ],
+   "io": [
+    -2.51,
+    0.025,
+    0.024
+   ]
+  },
+  {
+   "label": "IceCube DeepCore 9.3 yr",
+   "reference": "IceCube, arXiv:2405.02163; inverted ordering from the released likelihood map, doi:10.7910/DVN/U20MMB",
+   "quantity": "dm32",
+   "dm21": 0.0739,
+   "no": [
+    2.401,
+    0.04,
+    0.05
+   ],
+   "io": "from the released map: profiled over sin^2 theta23, interval at -2 Delta lnL = 1"
+  }
+ ]
+}

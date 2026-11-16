@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+data/external/
+output/
+.pytest_cache/
+results/bands_parts/

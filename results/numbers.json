@@ -1,0 +1,2314 @@
+{
+ "numbers": [
+  {
+   "id": "abs.dc_independent",
+   "section": "Abstract",
+   "location": "Abstract, main:83",
+   "quantity": "JUNO - DeepCore all closest gap (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    88.74840688445613,
+    95.31143463129071
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec2.slope_sbr_lbl",
+   "section": "Sec. 2: the weighted bin average, fig_deepcore_bin_weights",
+   "location": "Sec. 2, main:177",
+   "quantity": "dy/dx of the closed forms, reactor and accelerator (\"slope close to -1\")",
+   "paper": "-1",
+   "paper_values": [
+    -1.0
+   ],
+   "new": [
+    -0.9999999999999997,
+    -0.9999999999999997
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec2.weight_20_50",
+   "section": "Sec. 2: the weighted bin average, fig_deepcore_bin_weights",
+   "location": "Sec. 2, main:209",
+   "quantity": "weight share [%] of up-going bins at 20-50 GeV",
+   "paper": "two thirds",
+   "paper_values": [
+    66.7
+   ],
+   "new": [
+    65.53069431429701
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec2.weight_core",
+   "section": "Sec. 2: the weighted bin average, fig_deepcore_bin_weights",
+   "location": "Sec. 2, main:209",
+   "quantity": "weight share [%] below 20 GeV, cos theta_z < -0.56",
+   "paper": "about a sixth",
+   "paper_values": [
+    16.7
+   ],
+   "new": [
+    17.03776011323007
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.lbl_agree",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:270",
+   "quantity": "generic beam minus Eq. (3.4), max over dCP",
+   "paper": "0.1",
+   "paper_values": [
+    0.1
+   ],
+   "new": [
+    0.09175175970443661
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.eq36_103p8",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:259",
+   "quantity": "2 c12^2 Dm21 of Eq. (3.6)",
+   "paper": "103.8",
+   "paper_values": [
+    103.8
+   ],
+   "new": [
+    103.81140000000002
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.eq36_11p6",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:259",
+   "quantity": "s13 sin 2theta12 tan theta23 Dm21 at 0.561",
+   "paper": "11.6",
+   "paper_values": [
+    11.6
+   ],
+   "new": [
+    11.572149914714295
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.lbl_unequal",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:283",
+   "quantity": "NOvA-like nu only minus Eq. (3.4), dCP 177, 0 deg",
+   "paper": "a few",
+   "paper_values": [],
+   "new": [
+    -4.185328078450837,
+    -6.781671577794853
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec3.dphi_above_2p5",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:307",
+   "quantity": "energy [MeV] of the maximum of Dm2_phi,ee",
+   "paper": "2.5 MeV",
+   "paper_values": [
+    2.5
+   ],
+   "new": [
+    2.46
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.juno_resolution",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:307",
+   "quantity": "sigma_E / E [%] of JUNO at 1 MeV from a, b, c (the paper quotes JUNO)",
+   "paper": "2.95%",
+   "paper_values": [],
+   "new": [
+    2.9430766214966275
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec3.juno_b",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:307",
+   "quantity": "JUNO b at a_res = 2.61%",
+   "paper": "25.7",
+   "paper_values": [
+    25.7
+   ],
+   "new": [
+    25.66206558498327
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.juno_2to4",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:307",
+   "quantity": "JUNO b(a_res = 4%) - b(2%)",
+   "paper": "about 10",
+   "paper_values": [
+    10.0
+   ],
+   "new": [
+    9.736805001329259
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec3.eeff_juno",
+   "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
+   "location": "Sec. 3, main:312",
+   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "paper": "about 4 MeV",
+   "paper_values": [
+    4.0
+   ],
+   "new": [
+    4.149026216033458
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.msw_energy",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:325",
+   "quantity": "1-3 resonance [GeV], densest and lightest mantle",
+   "paper": "6--10 GeV",
+   "paper_values": [
+    6.0,
+    10.0
+   ],
+   "new": [
+    5.7717745605909725,
+    9.563274712859913
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.b_reference",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:329",
+   "quantity": "b of the reference configuration (fig_deepcore_bin_weights)",
+   "paper": "119.7",
+   "paper_values": [
+    119.7
+   ],
+   "new": [
+    119.74738865965601
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.weight_above_10",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:335",
+   "quantity": "weight share [%] of the bins above 10 GeV",
+   "paper": "above about 10 GeV",
+   "paper_values": [],
+   "new": [
+    97.7390726858913
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec4.freq_share",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:358",
+   "quantity": "frequency shift: share [%] of delta_atm at x0, NuFIT phases",
+   "paper": "about 70%",
+   "paper_values": [
+    70.0
+   ],
+   "new": [
+    69.13411438893404
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.amp_rest",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:358",
+   "quantity": "amplitude effect: share of the rest",
+   "paper": "most of the rest",
+   "paper_values": [],
+   "new": [
+    0.4978031125817407
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec4.datm_x_dependence",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:360",
+   "quantity": "max |1 + dy/dx| [%], DeepCore nu_mu",
+   "paper": "about 1%",
+   "paper_values": [
+    1.0
+   ],
+   "new": [
+    1.0882610714628482
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_deepcore_resolution.sigma_lnE",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:399",
+   "quantity": "sigma_lnE of the kernels, bin variance removed (min, max over true energy)",
+   "paper": "0.29--0.34",
+   "paper_values": [
+    0.29,
+    0.34
+   ],
+   "new": [
+    0.29089947158553425,
+    0.33882026115774766
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.valid_tab",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:406",
+   "quantity": "tabulated response minus full fit (max over x)",
+   "paper": "within 2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    1.8905475501272662
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.res_scan",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:408",
+   "quantity": "range of b over the Gaussian sigma_lnE scan",
+   "paper": "up to about 11",
+   "paper_values": [
+    11.0
+   ],
+   "new": [
+    10.924821507853324
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.emax_raise",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:410",
+   "quantity": "rise at E_max 20 GeV; NOvA-DC nu_mu: centers, max gap",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    21.72162556595552,
+    23.050053659691002,
+    40.02598256361506
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec4.direction",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:411",
+   "quantity": "b(zenith width x0.5) - b(x2): nu_mu, all channels; range of the sigma_lnE scan",
+   "paper": "by less than the energy resolution moves it",
+   "paper_values": [],
+   "new": [
+    6.505966031245848,
+    4.975013512290616,
+    10.924821507853324
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec4.orca_vs_dc",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:430",
+   "quantity": "DeepCore all minus ORCA6 all at x0 (fig_deepcore_vs_orca6)",
+   "paper": "about 11",
+   "paper_values": [
+    11.0
+   ],
+   "new": [
+    11.276769156068
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.orca_trk_close",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:430",
+   "quantity": "ORCA6 tracks minus DeepCore all at x0",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    3.675350941563437
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec4.orca_shower_weight",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:430",
+   "quantity": "shower share [%] of the ORCA6 weight, global minimum",
+   "paper": "about 10%",
+   "paper_values": [
+    10.0
+   ],
+   "new": [
+    9.8575903070977
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec4.orca_slope",
+   "section": "Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and fig_deepcore_vs_orca6",
+   "location": "Sec. 4, main:430",
+   "quantity": "dy/dx of ORCA6 all classes (min, max)",
+   "paper": "a few percent",
+   "paper_values": [],
+   "new": [
+    -1.0227206224567107,
+    -0.979045717830228
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_solutions_plane.s23_range",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:445",
+   "quantity": "3 sigma range of the true sin^2 theta23",
+   "paper": "0.430--0.596",
+   "paper_values": [
+    0.43,
+    0.596
+   ],
+   "new": [
+    0.43,
+    0.596
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.valley_acc_dis",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:454",
+   "quantity": "true points with a range of b (of 396): NOvA, T2K dis",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    396.0,
+    396.0
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.valley_dc_app",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:454",
+   "quantity": "with a range: DC nu_mu, DC all, NOvA all, T2K all",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    339.0,
+    396.0,
+    0.0,
+    0.0
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova_dis.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_dis, dcp unknown",
+   "paper": "40",
+   "paper_values": [
+    40.0
+   ],
+   "new": [
+    40.4816865011955
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova_dis.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_dis, t23 unknown",
+   "paper": "22",
+   "paper_values": [
+    22.0
+   ],
+   "new": [
+    22.209737221853914
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova_dis.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_dis, both unknown",
+   "paper": "41",
+   "paper_values": [
+    41.0
+   ],
+   "new": [
+    41.423872039533094
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_all, dcp unknown",
+   "paper": "25",
+   "paper_values": [
+    25.0
+   ],
+   "new": [
+    25.36394131891825
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_all, t23 unknown",
+   "paper": "6",
+   "paper_values": [
+    6.0
+   ],
+   "new": [
+    5.644672226070767
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.nova.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, nova_all, both unknown",
+   "paper": "29",
+   "paper_values": [
+    29.0
+   ],
+   "new": [
+    28.748079522263225
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k_dis.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_dis, dcp unknown",
+   "paper": "41",
+   "paper_values": [
+    41.0
+   ],
+   "new": [
+    41.01613241586956
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k_dis.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_dis, t23 unknown",
+   "paper": "24",
+   "paper_values": [
+    24.0
+   ],
+   "new": [
+    23.534120968237133
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k_dis.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_dis, both unknown",
+   "paper": "42",
+   "paper_values": [
+    42.0
+   ],
+   "new": [
+    41.885843995138714
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_all, dcp unknown",
+   "paper": "28",
+   "paper_values": [
+    28.0
+   ],
+   "new": [
+    27.65668736545365
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_all, t23 unknown",
+   "paper": "3",
+   "paper_values": [
+    3.0
+   ],
+   "new": [
+    2.791293630976128
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.t2k.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, t2k_all, both unknown",
+   "paper": "31",
+   "paper_values": [
+    31.0
+   ],
+   "new": [
+    31.023430219887743
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dcn.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dcn, dcp unknown",
+   "paper": "2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    1.9923942296178438
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dcn.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dcn, t23 unknown",
+   "paper": "21",
+   "paper_values": [
+    21.0
+   ],
+   "new": [
+    21.469358860039875
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dcn.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dcn, both unknown",
+   "paper": "25",
+   "paper_values": [
+    25.0
+   ],
+   "new": [
+    24.691170433803663
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dca.dcp",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dca, dcp unknown",
+   "paper": "3",
+   "paper_values": [
+    3.0
+   ],
+   "new": [
+    2.5962408677798265
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dca.t23",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dca, t23 unknown",
+   "paper": "5",
+   "paper_values": [
+    5.0
+   ],
+   "new": [
+    4.617162027467984
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_ranges.width.dca.both",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:468",
+   "quantity": "fig_intercept_ranges bar width, dca, both unknown",
+   "paper": "7",
+   "paper_values": [
+    7.0
+   ],
+   "new": [
+    7.1515415324976175
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_vs_truth.valley_tol",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:482",
+   "quantity": "chi^2 tolerance of the valley of dCP_IO",
+   "paper": "0.01",
+   "paper_values": [
+    0.01
+   ],
+   "new": [
+    0.01
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_intercept_vs_truth.dc_range",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:483",
+   "quantity": "DeepCore: widest range of b within 0.01 over dCP_IO (scans)",
+   "paper": "changes little",
+   "paper_values": [],
+   "new": [
+    2.202339121068661
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_intercept_vs_truth.t2k_same_dis",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:483",
+   "quantity": "T2K - NOvA dis per true point: lo, hi (min, max each)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    -2.3090405113358656,
+    0.3509478200963656,
+    -0.5146274568833888,
+    3.0495192965113773
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.nova_t2k_few",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:494",
+   "quantity": "NOvA - T2K, both-unknown bars: dis lo, hi; app lo, hi",
+   "paper": "a few",
+   "paper_values": [],
+   "new": [
+    0.48612714017345127,
+    0.02415518456783161,
+    -0.4621144663575194,
+    -2.737465163982037
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.app_nova_t2k",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:495",
+   "quantity": "NOvA minus T2K with appearance at the same true point (max)",
+   "paper": "about 20",
+   "paper_values": [
+    20.0
+   ],
+   "new": [
+    19.58154836139738
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.app_t2k",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:495",
+   "quantity": "arc [deg] spanned by T2K dCP_IO with app over true dCP",
+   "paper": "changes",
+   "paper_values": [],
+   "new": [
+    221.73637643382574
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.app_3pi2",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:495",
+   "quantity": "dCP_IO [deg] of NOvA with appearance over true dCP",
+   "paper": "close to 270 deg",
+   "paper_values": [],
+   "new": [
+    257.5167697054876,
+    276.8628410146502
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.nova_vacuum",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:508",
+   "quantity": "NOvA dis band narrower than the closed form without matter [%] (min, max)",
+   "paper": "is slightly narrower",
+   "paper_values": [],
+   "new": [
+    0.1642722516148276,
+    0.17527539289242666
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.dca_constant",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:508",
+   "quantity": "DeepCore all: range of b over true dCP, true theta23",
+   "paper": "constant",
+   "paper_values": [],
+   "new": [
+    1.9458349871264744,
+    3.8239599453116284
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.dyb_on_line",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:525",
+   "quantity": "b of Daya Bay; the line 2 s12^2 Dm21",
+   "paper": "on its line",
+   "paper_values": [],
+   "new": [
+    44.79999999999979,
+    45.988600000000005
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.juno_measured_b",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:525",
+   "quantity": "b of JUNO (207 days)",
+   "paper": "27",
+   "paper_values": [
+    27.0
+   ],
+   "new": [
+    26.99999999999968
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.juno_on_line",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:525",
+   "quantity": "JUNO line (a_res = 2.61%) at the measured x",
+   "paper": "consistent with the line",
+   "paper_values": [],
+   "new": [
+    25.496067735951407
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec5.nova_in_app_band",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:527",
+   "quantity": "NOvA, T2K, T2K+NOvA in NOvA all band: (b, lo, hi) x 3",
+   "paper": "inside",
+   "paper_values": [],
+   "new": [
+    109.79999999999974,
+    89.0875738876091,
+    118.10234822535787,
+    109.89999999999958,
+    89.99985454629999,
+    118.84172810408762,
+    99.80000000000015,
+    88.89252828442724,
+    118.06938234429428
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.nufit_in_app_band",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:527",
+   "quantity": "NuFIT 6.0 in the NOvA all band: (b, lo, hi)",
+   "paper": "inside",
+   "paper_values": [],
+   "new": [
+    98.89999999999985,
+    89.40851256193562,
+    118.15659208419885
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.dcdata_in_dca_band",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:530",
+   "quantity": "our DeepCore data fit in DC all band: (b, lo, hi)",
+   "paper": "inside",
+   "paper_values": [],
+   "new": [
+    117.78664356242854,
+    113.98796969214303,
+    121.07433449693892
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec5.dc93_above_dca",
+   "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
+   "location": "Sec. 5, main:532",
+   "quantity": "DeepCore 9.3 yr and the DC all band at its x: (b, lo, hi)",
+   "paper": "lies higher than our all-channel band",
+   "paper_values": [],
+   "new": [
+    128.8000000000001,
+    113.90489745241561,
+    120.97840709112329
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec6.precisions",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:576",
+   "quantity": "published 1 sigma of |Dm31| [%]: JUNO, NOvA, DeepCore 9.3 yr",
+   "paper": "1.0%, 1.4%, 1.9%",
+   "paper_values": [
+    1.0,
+    1.4,
+    1.9
+   ],
+   "new": [
+    1.0362694300518136,
+    1.3519049569848425,
+    1.8742190753852563
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.dis.JUNO_NOvA",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap juno - nova_dis (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    56.324353685654785,
+    82.44668856735046
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.dis.JUNO_DeepCore",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap juno - dcn (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    87.7407581482105,
+    112.34678363548548
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.dis.NOvA_DeepCore",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap nova_dis - dcn (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    0.0,
+    40.02598256361506
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.all.JUNO_NOvA",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap juno - nova_all (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    63.747766806387176,
+    92.4958463286504
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.all.JUNO_DeepCore",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap juno - dca (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    88.74840688445613,
+    95.31143463129071
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_vs_precision.gap.all.NOvA_DeepCore",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:561",
+   "quantity": "fig_synergy_vs_precision closest gap nova_all - dca (min, max)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    0.20098928889007084,
+    30.3046350733009
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec6.solar_sep",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:564",
+   "quantity": "largest |change of the separation from JUNO| for the JUNO precision of Dm21 and sin^2 theta12",
+   "paper": "at most 2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    2.0368980432052854
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec6.joint_larger",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:566",
+   "quantity": "share of the true points where the joint NOvA-DC IO fit exceeds Eq. (1.1) at 1.5% [%]: dis, all",
+   "paper": "almost all",
+   "paper_values": [],
+   "new": [
+    100.0,
+    98.98989898989899
+   ],
+   "moved": null
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.5.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + dca 1.0% (inner, outer)",
+   "paper": "[9.8, 11.3]",
+   "paper_values": [
+    9.8,
+    11.3
+   ],
+   "new": [
+    9.812911848930606,
+    11.317924151320796
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.5.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + dca 1.5% (inner, outer)",
+   "paper": "[4.9, 5.7]",
+   "paper_values": [
+    4.9,
+    5.7
+   ],
+   "new": [
+    4.906455924465303,
+    5.658962075660398
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.5.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + dca 2.0% (inner, outer)",
+   "paper": "[2.9, 3.3]",
+   "paper_values": [
+    2.9,
+    3.3
+   ],
+   "new": [
+    2.8861505438031196,
+    3.328801220976705
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.8.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + dca 1.0% (inner, outer)",
+   "paper": "[7.5, 8.6]",
+   "paper_values": [
+    7.5,
+    8.6
+   ],
+   "new": [
+    7.47935354339223,
+    8.626466578750605
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.8.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + dca 1.5% (inner, outer)",
+   "paper": "[4.2, 4.9]",
+   "paper_values": [
+    4.2,
+    4.9
+   ],
+   "new": [
+    4.244339035004587,
+    4.895295913201036
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j0.8.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + dca 2.0% (inner, outer)",
+   "paper": "[2.6, 3.0]",
+   "paper_values": [
+    2.6,
+    3.0
+   ],
+   "new": [
+    2.6435646144748404,
+    3.049009739041163
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j1.0.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + dca 1.0% (inner, outer)",
+   "paper": "[6.1, 7.1]",
+   "paper_values": [
+    6.1,
+    7.1
+   ],
+   "new": [
+    6.133069905581629,
+    7.073702594575497
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j1.0.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + dca 1.5% (inner, outer)",
+   "paper": "[3.8, 4.4]",
+   "paper_values": [
+    3.8,
+    4.4
+   ],
+   "new": [
+    3.77419686497331,
+    4.353047750507998
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.dca.j1.0.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + dca 2.0% (inner, outer)",
+   "paper": "[2.5, 2.8]",
+   "paper_values": [
+    2.5,
+    2.8
+   ],
+   "new": [
+    2.4532279622326514,
+    2.829481037830199
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.5.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + nova_all 1.0% (inner, outer)",
+   "paper": "[5.1, 10.7]",
+   "paper_values": [
+    5.1,
+    10.7
+   ],
+   "new": [
+    5.062985883291444,
+    10.659116941626475
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.5.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + nova_all 1.5% (inner, outer)",
+   "paper": "[2.5, 5.3]",
+   "paper_values": [
+    2.5,
+    5.3
+   ],
+   "new": [
+    2.531492941645722,
+    5.329558470813238
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.5.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.5% + nova_all 2.0% (inner, outer)",
+   "paper": "[1.5, 3.1]",
+   "paper_values": [
+    1.5,
+    3.1
+   ],
+   "new": [
+    1.489113495085719,
+    3.135034394596022
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.8.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + nova_all 1.0% (inner, outer)",
+   "paper": "[3.9, 8.1]",
+   "paper_values": [
+    3.9,
+    8.1
+   ],
+   "new": [
+    3.8589831427526247,
+    8.1243269372153
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.8.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + nova_all 1.5% (inner, outer)",
+   "paper": "[2.2, 4.6]",
+   "paper_values": [
+    2.2,
+    4.6
+   ],
+   "new": [
+    2.1898727868907626,
+    4.610344697935326
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j0.8.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 0.8% + nova_all 2.0% (inner, outer)",
+   "paper": "[1.4, 2.9]",
+   "paper_values": [
+    1.4,
+    2.9
+   ],
+   "new": [
+    1.3639509383867037,
+    2.871529348498512
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j1.0.p1.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + nova_all 1.0% (inner, outer)",
+   "paper": "[3.2, 6.7]",
+   "paper_values": [
+    3.2,
+    6.7
+   ],
+   "new": [
+    3.1643661770571523,
+    6.661948088516547
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j1.0.p1.5",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + nova_all 1.5% (inner, outer)",
+   "paper": "[1.9, 4.1]",
+   "paper_values": [
+    1.9,
+    4.1
+   ],
+   "new": [
+    1.9473022628044014,
+    4.099660362164029
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_synergy_rings.ring.nova_all.j1.0.p2.0",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:578",
+   "quantity": "fig_synergy_rings ring, JUNO 1.0% + nova_all 2.0% (inner, outer)",
+   "paper": "[1.3, 2.7]",
+   "paper_values": [
+    1.3,
+    2.7
+   ],
+   "new": [
+    1.265746470822861,
+    2.664779235406619
+   ],
+   "moved": false
+  },
+  {
+   "id": "sec6.ring_ratio",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:579",
+   "quantity": "outer / inner synergy with JUNO: DC all (narrow), NOvA all",
+   "paper": "factor of two",
+   "paper_values": [],
+   "new": [
+    1.153370612674382,
+    2.1053025205547264
+   ],
+   "moved": null
+  },
+  {
+   "id": "sec6.equal_prec",
+   "section": "Sec. 6: synergies, fig_synergy_vs_precision and fig_synergy_rings",
+   "location": "Sec. 6, main:579",
+   "quantity": "rings at 1% / 1%: DC all, NOvA all (inner, outer)",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    6.133069905581629,
+    7.073702594575497,
+    3.1643661770571523,
+    6.661948088516547
+   ],
+   "moved": null
+  },
+  {
+   "id": "concl.slope_juno",
+   "section": "Sec. 7: conclusions",
+   "location": "Sec. 7, main:594",
+   "quantity": "max |1 + dy/dx| [%] of JUNO",
+   "paper": "within about 1%",
+   "paper_values": [
+    1.0
+   ],
+   "new": [
+    0.7721236534377618
+   ],
+   "moved": false
+  },
+  {
+   "id": "concl.slope_dc",
+   "section": "Sec. 7: conclusions",
+   "location": "Sec. 7, main:594",
+   "quantity": "max |1 + dy/dx| [%] of DeepCore nu_mu",
+   "paper": "within about 1%",
+   "paper_values": [
+    1.0
+   ],
+   "new": [
+    1.0882610714628482
+   ],
+   "moved": false
+  },
+  {
+   "id": "concl.orca_slope",
+   "section": "Sec. 7: conclusions",
+   "location": "Sec. 7, main:594",
+   "quantity": "dy/dx of ORCA6 all classes (min, max)",
+   "paper": "a few percent",
+   "paper_values": [],
+   "new": [
+    -1.0227206224567107,
+    -0.979045717830228
+   ],
+   "moved": null
+  },
+  {
+   "id": "concl.dc_nearly_fixed",
+   "section": "Sec. 7: conclusions",
+   "location": "Sec. 7, main:602",
+   "quantity": "outer / inner synergy with JUNO: DC all, NOvA all",
+   "paper": "-",
+   "paper_values": [],
+   "new": [
+    1.153370612674382,
+    2.1053025205547264
+   ],
+   "moved": null
+  },
+  {
+   "id": "appA.b_sbr",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:23",
+   "quantity": "2 s12^2 Dm21, Eq. (3.7)",
+   "paper": "46.0",
+   "paper_values": [
+    46.0
+   ],
+   "new": [
+    45.988600000000005
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.b_lead",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:24",
+   "quantity": "2 c12^2 Dm21",
+   "paper": "103.8",
+   "paper_values": [
+    103.8
+   ],
+   "new": [
+    103.81140000000002
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.juno_abc",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:39",
+   "quantity": "a_res, b_res, c_res [%] of JUNO",
+   "paper": "2.61%, 0.64%, 1.20%",
+   "paper_values": [
+    2.61,
+    0.64,
+    1.2
+   ],
+   "new": [
+    2.6100000000000003,
+    0.64,
+    1.2
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.juno_rhoye",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:42",
+   "quantity": "rho Y_e of the JUNO crust [g/cm^3]",
+   "paper": "1.225",
+   "paper_values": [
+    1.225
+   ],
+   "new": [
+    1.225
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.lbl_density",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:59",
+   "quantity": "crust density of NOvA and T2K [g/cm^3]",
+   "paper": "2.84, 2.6",
+   "paper_values": [
+    2.84,
+    2.6
+   ],
+   "new": [
+    2.84,
+    2.6
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.events",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:81",
+   "quantity": "DeepCore neutrino events",
+   "paper": "21402",
+   "paper_values": [
+    21402.0
+   ],
+   "new": [
+    21401.834
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.bins",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:85",
+   "quantity": "analysis energy bins: number, first edge, last two edges [GeV]",
+   "paper": "10, 6.31, 88.2, 158.5",
+   "paper_values": [
+    10.0,
+    6.31,
+    88.2,
+    158.5
+   ],
+   "new": [
+    10.0,
+    6.31,
+    88.19854278,
+    158.49
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.cosz_bins",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:86",
+   "quantity": "analysis zenith bins: first and last edge of cos theta_z",
+   "paper": "-1, 0.1",
+   "paper_values": [
+    -1.0,
+    0.1
+   ],
+   "new": [
+    -1.0,
+    0.1
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.grid_converged",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:101",
+   "quantity": "largest |b change| on a five times finer grid (1500 x 900)",
+   "paper": "unchanged at the precision quoted in this paper",
+   "paper_values": [
+    0.05
+   ],
+   "new": [
+    0.03428427981484106
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.direction",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:103",
+   "quantity": "b(zenith width x0.5) - b(x2): nu_mu, all channels",
+   "paper": "6.5, 5.0",
+   "paper_values": [
+    6.5,
+    5.0
+   ],
+   "new": [
+    6.505966031245848,
+    4.975013512290616
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.dc.gauss_vs_tab",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:103",
+   "quantity": "b Gaussian response minus tabulated (fig_deepcore_resolution and fig_deepcore_energy_window)",
+   "paper": "3",
+   "paper_values": [
+    3.0
+   ],
+   "new": [
+    3.2904658601303964
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.orca.total",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:113",
+   "quantity": "|ORCA6 predicted / observed total - 1| [%]",
+   "paper": "0.7%",
+   "paper_values": [
+    0.7
+   ],
+   "new": [
+    0.6838882911217259
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.orca.weights",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:113",
+   "quantity": "weight shares [%]: high-purity tracks, low-purity tracks, showers",
+   "paper": "65%, 25%, 10%",
+   "paper_values": [
+    65.0,
+    25.0,
+    10.0
+   ],
+   "new": [
+    64.99645165885406,
+    25.14595803404822,
+    9.8575903070977
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.orca.lp_add",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:113",
+   "quantity": "adding the low-purity tracks: |change of b|, fixed and profiled",
+   "paper": "less than 2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    0.7561822169149224,
+    1.9073623138293243
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.orca.showers",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:113",
+   "quantity": "adding the showers lowers b (global minimum, x0)",
+   "paper": "13",
+   "paper_values": [
+    13.0
+   ],
+   "new": [
+    13.044757783802112
+   ],
+   "moved": false
+  },
+  {
+   "id": "appA.orca.s23",
+   "section": "App. A: inputs and detector models",
+   "location": "App. A, app:113",
+   "quantity": "adding the showers: change of sin^2 theta23_IO (global minimum, x0)",
+   "paper": "about 0.01",
+   "paper_values": [
+    0.01
+   ],
+   "new": [
+    0.012780632562941041
+   ],
+   "moved": false
+  },
+  {
+   "id": "appB.exchange_numu",
+   "section": "App. B: the weighted bin average",
+   "location": "App. B, app:160",
+   "quantity": "|x returned - x0| for a true IO, nu_mu",
+   "paper": "about 2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    2.30908493229192
+   ],
+   "moved": false
+  },
+  {
+   "id": "appB.exchange_all",
+   "section": "App. B: the weighted bin average",
+   "location": "App. B, app:160",
+   "quantity": "|x returned - x0| for a true IO, all channels",
+   "paper": "within 0.1",
+   "paper_values": [
+    0.1
+   ],
+   "new": [
+    0.09644243935749697
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.eeff_0",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:231",
+   "quantity": "E_eff [MeV] at a_res = 0",
+   "paper": "3.5 MeV",
+   "paper_values": [
+    3.5
+   ],
+   "new": [
+    3.453876299313753
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.eeff_juno",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:231",
+   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "paper": "4.1 MeV",
+   "paper_values": [
+    4.1
+   ],
+   "new": [
+    4.149026216033458
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.ares_cross",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:231",
+   "quantity": "a_res [%] where JUNO b equals the 4 MeV closed form",
+   "paper": "2.3%",
+   "paper_values": [
+    2.3
+   ],
+   "new": [
+    2.270177113430171
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.offset",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:220",
+   "quantity": "DeepCore without matter - Eq. (3.4), theta23 fixed and fitted (max)",
+   "paper": "below 1",
+   "paper_values": [
+    1.0
+   ],
+   "new": [
+    0.3599423077660191,
+    0.9175027123684458
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.delta21_dyb",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:220",
+   "quantity": "Delta_21 at 1.65 km and 4 MeV",
+   "paper": "0.04",
+   "paper_values": [
+    0.04
+   ],
+   "new": [
+    0.039143468796525506
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.delta21_810",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:224",
+   "quantity": "Delta_21 at 810 km and 2 GeV",
+   "paper": "0.04",
+   "paper_values": [
+    0.04
+   ],
+   "new": [
+    0.03843176936386141
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.nova_like",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "Eq. (3.4) minus NOvA-like beam, neutrinos only, dCP 177, 0 deg",
+   "paper": "4 to 7",
+   "paper_values": [
+    4.0,
+    7.0
+   ],
+   "new": [
+    4.185328078450837,
+    6.781671577794853
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.t2k_like",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "T2K-like beam minus Eq. (3.4), all shares (max)",
+   "paper": "below 0.5",
+   "paper_values": [
+    0.5
+   ],
+   "new": [
+    0.4574797800402308
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.equal_shares",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "b - Eq. (3.4), equal shares, dCP 177, 0: NOvA-like, T2K-like",
+   "paper": "cancels for equal shares",
+   "paper_values": [],
+   "new": [
+    -0.04120072709635281,
+    0.09175317210934963,
+    -0.02965686139836521,
+    0.045907361904752975
+   ],
+   "moved": null
+  },
+  {
+   "id": "appC.ahat_2gev",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "A-hat at 2 GeV in the NOvA crust",
+   "paper": "0.17",
+   "paper_values": [
+    0.17
+   ],
+   "new": [
+    0.17108290355654202
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.nova_narrower",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "NOvA dis band narrower than the closed form [%] (min, max)",
+   "paper": "about 11%",
+   "paper_values": [
+    11.0
+   ],
+   "new": [
+    10.783064793433317,
+    10.913503802850377
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.nova_center",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:227",
+   "quantity": "NOvA dis band center minus closed form center (max)",
+   "paper": "close to that of the closed form",
+   "paper_values": [],
+   "new": [
+    1.005325238362886
+   ],
+   "moved": null
+  },
+  {
+   "id": "appC.cf4_gap",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:231",
+   "quantity": "JUNO b at a_res = 2.61% minus the 4 MeV closed form",
+   "paper": "2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    2.0365384183668844
+   ],
+   "moved": false
+  },
+  {
+   "id": "appC.eq38",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:231",
+   "quantity": "|Eq. (3.8) - weighted bin average| of JUNO at a_res = 2.61%",
+   "paper": "1",
+   "paper_values": [
+    1.0
+   ],
+   "new": [
+    0.4016744953882636
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a0",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 0%",
+   "paper": "3.5",
+   "paper_values": [
+    3.5
+   ],
+   "new": [
+    3.453876299313753
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a1",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 1%",
+   "paper": "3.6",
+   "paper_values": [
+    3.6
+   ],
+   "new": [
+    3.5725526679512645
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a2",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 2%",
+   "paper": "3.9",
+   "paper_values": [
+    3.9
+   ],
+   "new": [
+    3.8914435021930265
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a2.61",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "paper": "4.1",
+   "paper_values": [
+    4.1
+   ],
+   "new": [
+    4.149026216033458
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a5",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 5%",
+   "paper": "5.3",
+   "paper_values": [
+    5.3
+   ],
+   "new": [
+    5.277731280288216
+   ],
+   "moved": false
+  },
+  {
+   "id": "fig_juno_effective_energy.eeff.a8",
+   "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
+   "location": "App. C, app:237",
+   "quantity": "E_eff [MeV] at a_res = 8%",
+   "paper": "6.4",
+   "paper_values": [
+    6.4
+   ],
+   "new": [
+    6.397230031213076
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.y_20_50",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:272",
+   "quantity": "|y_i| of the up-going 20-50 GeV bins, not gray (min, max)",
+   "paper": "2.421 and 2.426",
+   "paper_values": [
+    2.421,
+    2.426
+   ],
+   "new": [
+    2.4205203171407166,
+    2.425703559280377
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.solar_phase_mumu",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:259",
+   "quantity": "|Dm2_phi,mumu| over the DeepCore bins, weighted mean",
+   "paper": "negligible for DeepCore",
+   "paper_values": [],
+   "new": [
+    0.01425984879404416
+   ],
+   "moved": null
+  },
+  {
+   "id": "appD.first_term",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:270",
+   "quantity": "2 s13^2 cos 2theta12 Dm21 / c13^2",
+   "paper": "1.3",
+   "paper_values": [
+    1.3
+   ],
+   "new": [
+    1.2976948622258575
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.analytic_share",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:275",
+   "quantity": "frequency form: share [%] of delta_atm over x",
+   "paper": "72--77%",
+   "paper_values": [
+    72.0,
+    77.0
+   ],
+   "new": [
+    72.30666146560428,
+    76.94721273537372
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.omsd_share",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:275",
+   "quantity": "one mass scale: share [%] of delta_atm over x",
+   "paper": "92--95%",
+   "paper_values": [
+    92.0,
+    95.0
+   ],
+   "new": [
+    91.89160360873566,
+    94.68548158120093
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.cp_amp_2",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:275",
+   "quantity": "exact b, NuFIT phases minus 90 deg, over x",
+   "paper": "1.2--1.3",
+   "paper_values": [
+    1.2,
+    1.3
+   ],
+   "new": [
+    1.1949947174125413,
+    1.3484814942528658
+   ],
+   "moved": false
+  },
+  {
+   "id": "appD.cp_mirror",
+   "section": "App. D: the atmospheric solution in matter",
+   "location": "App. D, app:321",
+   "quantity": "A-hat > 4 in the mirror octant (sin^2 theta23 = 0.439)",
+   "paper": "changes sign",
+   "paper_values": [],
+   "new": [
+    -2.919920267816606
+   ],
+   "moved": null
+  },
+  {
+   "id": "appE.asimov_points",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:346",
+   "quantity": "Asimov points: number, first and last x",
+   "paper": "25, 2.2--2.8",
+   "paper_values": [
+    25.0,
+    2.2,
+    2.8
+   ],
+   "new": [
+    25.0,
+    2.2,
+    2.8
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.valid_tab",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:384",
+   "quantity": "(i) tabulated response minus full fit (min, max over x)",
+   "paper": "1.2--1.9",
+   "paper_values": [
+    1.2,
+    1.9
+   ],
+   "new": [
+    1.190350191081734,
+    1.8905475501272662
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.valid_fixed",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:384",
+   "quantity": "(ii) WBA on the fitter, splitting only, minus full fit (max)",
+   "paper": "1.7",
+   "paper_values": [
+    1.7
+   ],
+   "new": [
+    1.727827995041423
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.valid_fixed_datm",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:384",
+   "quantity": "(ii) over delta_atm of fig_deepcore_bin_weights",
+   "paper": "about a tenth",
+   "paper_values": [
+    0.1
+   ],
+   "new": [
+    0.10842301861168127
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.valid_all",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:384",
+   "quantity": "(iii) WBA with all nuisances minus full fit (min, max)",
+   "paper": "reaches the minimum of the full fit",
+   "paper_values": [],
+   "new": [
+    0.001404365397405627,
+    0.016583530687569237
+   ],
+   "moved": null
+  },
+  {
+   "id": "appE.nuisance",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:398",
+   "quantity": "nuisance parameters lower the WBA on the fitter (min, max over x)",
+   "paper": "0.3--1.2",
+   "paper_values": [
+    0.3,
+    1.2
+   ],
+   "new": [
+    0.33428088968287284,
+    1.171852977518384
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.repro_s23",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:405",
+   "quantity": "sin^2 theta23 of the NO data fit",
+   "paper": "0.507 +- 0.058",
+   "paper_values": [
+    0.507,
+    0.058
+   ],
+   "new": [
+    0.506834206744855,
+    0.05830220465355501
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.repro_dm32",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:405",
+   "quantity": "Dm32 of the NO data fit",
+   "paper": "2.411 +- 0.078",
+   "paper_values": [
+    2.411,
+    0.078
+   ],
+   "new": [
+    2.4107362793457114,
+    0.07790608771117923
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.hs_asimov_matched",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:426",
+   "quantity": "Asimov x0: b(true splitting) - b(matched reading)",
+   "paper": "2",
+   "paper_values": [
+    2.0
+   ],
+   "new": [
+    1.925127378738054
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.hs_asimov_naive",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:426",
+   "quantity": "Asimov x0: b(true splitting) - b(at |Dm31,IO|)",
+   "paper": "14",
+   "paper_values": [
+    14.0
+   ],
+   "new": [
+    13.552892182186213
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.dm21_release",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:428",
+   "quantity": "Dm21 of the release fit [1e-5 eV^2]",
+   "paper": "7.39",
+   "paper_values": [
+    7.39
+   ],
+   "new": [
+    7.39
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.data_no",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:428",
+   "quantity": "Dm31 of the NO data fit",
+   "paper": "2.485 +- 0.078",
+   "paper_values": [
+    2.485,
+    0.078
+   ],
+   "new": [
+    2.4846362793457115,
+    0.07790608771117923
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.data_io",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:429",
+   "quantity": "Dm31 of the IO data fit",
+   "paper": "-2.367 +- 0.076",
+   "paper_values": [
+    -2.367,
+    0.076
+   ],
+   "new": [
+    -2.366849635783283,
+    0.07646950675478442
+   ],
+   "moved": false
+  },
+  {
+   "id": "appE.data_b",
+   "section": "App. E: full fit of the DeepCore release, fig_full_fit_validation and fig_deepcore_reproduction",
+   "location": "App. E, app:429",
+   "quantity": "b of the data fit",
+   "paper": "117.8",
+   "paper_values": [
+    117.8
+   ],
+   "new": [
+    117.78664356242854
+   ],
+   "moved": false
+  },
+  {
+   "id": "appF.nova_dc_edge",
+   "section": "App. F: combination of experiments",
+   "location": "App. F, app:477",
+   "quantity": "largest NOvA dis - DC nu_mu gap: true sin^2 theta23 below 0.53, 0.53 or more",
+   "paper": "0.53 or more",
+   "paper_values": [],
+   "new": [
+    18.99521590583656,
+    40.02598256361506
+   ],
+   "moved": null
+  },
+  {
+   "id": "appF.joint_larger",
+   "section": "App. F: combination of experiments",
+   "location": "App. F, app:477",
+   "quantity": "share of the true points where the joint NOvA-DC IO fit exceeds Eq. (1.1) at 1.5% [%]: dis, all",
+   "paper": "almost all",
+   "paper_values": [],
+   "new": [
+    100.0,
+    98.98989898989899
+   ],
+   "moved": null
+  },
+  {
+   "id": "appF.joint_max",
+   "section": "App. F: combination of experiments",
+   "location": "App. F, app:477",
+   "quantity": "largest joint NOvA-DC synergy at 1.5%: true sin^2 theta23, Eq. (1.1) there, joint value (dis, then all)",
+   "paper": "lower octant, nearly zero",
+   "paper_values": [],
+   "new": [
+    0.43,
+    0.0,
+    1.2280038204054406,
+    0.43,
+    0.02897217272156121,
+    0.5236108245141164
+   ],
+   "moved": null
+  }
+ ],
+ "not_computed": []
+}
