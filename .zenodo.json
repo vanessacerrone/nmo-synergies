@@ -1,7 +1,7 @@
 {
   "title": "nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino experiments as weighted bin averages",
   "upload_type": "software",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Code and data that reproduce every figure and number of V. Cerrone and M. Grassi, Phenomenology of neutrino mass ordering synergies in reactor, accelerator, and atmospheric neutrino experiments, and the role of the detector response (JHEP). It computes the wrong-ordering solutions of Daya Bay, JUNO, NOvA, T2K, IceCube DeepCore, and KM3NeT/ORCA6 from their public configurations and data releases as weighted averages of the values preferred by single bins, their dependence on the unknown delta_CP and theta23 and on the detector response, and the synergy of pairs of experiments.",
   "creators": [
     {
@@ -19,5 +19,12 @@
     "neutrino oscillations",
     "atmospheric neutrinos",
     "reactor neutrinos"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2611.21252",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv"
+    }
   ]
 }

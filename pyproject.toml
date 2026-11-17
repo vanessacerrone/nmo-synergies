@@ -1,6 +1,6 @@
 [project]
 name = "nmosyn"
-version = "1.2.0"
+version = "1.2.1"
 description = "Wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino experiments as weighted bin averages"
 readme = "README.md"
 license = {text = "MIT"}

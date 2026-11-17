@@ -195,10 +195,10 @@ sections of the NOvA and T2K spectra, `data/genie_ch2_xsec/` and `data/genie_wat
 If you use this code, please cite the paper and the software:
 
 > V. Cerrone and M. Grassi, *Phenomenology of neutrino mass ordering synergies in reactor, accelerator, and
-> atmospheric neutrino experiments, and the role of the detector response*, JHEP (2026), arXiv:XXXX.XXXXX.
+> atmospheric neutrino experiments, and the role of the detector response*, JHEP (2026), arXiv:2611.21252.
 
 > V. Cerrone and M. Grassi, *nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric
-> neutrino experiments as weighted bin averages*, version 1.2.0, Zenodo (2026), doi:10.5281/zenodo.XXXXXXX.
+> neutrino experiments as weighted bin averages*, version 1.2.1, Zenodo (2026), doi:10.5281/zenodo.XXXXXXX.
 
 ```bibtex
 @article{Cerrone:2026nmo,
@@ -207,14 +207,14 @@ If you use this code, please cite the paper and the software:
                neutrino experiments, and the role of the detector response}",
     journal = "JHEP",
     year    = "2026",
-    eprint  = "XXXX.XXXXX",
+    eprint  = "2611.21252",
     archivePrefix = "arXiv"
 }
 @software{nmosynergies:2026,
     author  = "Cerrone, Vanessa and Grassi, Marco",
     title   = "{nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino
                experiments as weighted bin averages}",
-    version = "1.2.0",
+    version = "1.2.1",
     year    = "2026",
     doi     = "10.5281/zenodo.XXXXXXX",
     url     = "https://github.com/vanessacerrone/nmo-synergies"
