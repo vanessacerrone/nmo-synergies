@@ -122,6 +122,7 @@ each: `fig_accelerator_closed_form.py` also writes `fig_juno_intercept_vs_resolu
 | `fig_deepcore_analytic` | not in the paper | DeepCore nu_mu disappearance, exact and analytic; its shares are quoted in App. D.1 | `analytic` |
 | `fig_full_fit_validation` | App. E | weighted bin average against the full fit of the DeepCore release | `deepcore`, `icfit` |
 | `fig_deepcore_reproduction` | App. E | the IceCube DeepCore measurement reproduced from its release | `icfit` |
+| `fig_deepcore_data_vs_model` | not in the paper | observed DeepCore counts against the expected counts at the best fits of App. E: NO, and IO with the hypersurfaces read at both splittings of App. E.1, with the pulls | `icfit` |
 
 The other results hold numbers quoted in the text: `direction` (direction resolution, Sec. 4), `solar` (solar
 parameters, Sec. 6), `grid` (convergence of the DeepCore response, App. A.4), and `release` (event totals and

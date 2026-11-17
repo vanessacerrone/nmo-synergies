@@ -1,8 +1,9 @@
-"""Full fit of the IceCube DeepCore public release (App. E): fig_full_fit_validation, fig_deepcore_reproduction, and the
-numbers of App. E.
+"""Full fit of the IceCube DeepCore public release (App. E): fig_full_fit_validation, fig_deepcore_reproduction,
+fig_deepcore_data_vs_model, and the numbers of App. E.
 
 1. The observed data in both orderings, with the oscillation parameters of the release (App. E.3-E.4), with
-   the NuFIT 6.0 Dm21, and with the inverted-ordering hypersurfaces read at |Dm31,IO| (App. E.1).
+   the NuFIT 6.0 Dm21, and with the inverted-ordering hypersurfaces read at |Dm31,IO| (App. E.1); the observed
+   and expected counts per bin at these best fits (fig_deepcore_data_vs_model).
 2. The profiled chi^2 of the normal ordering on the grid of fig_deepcore_reproduction.
 3. NO Asimov data at X_GRID with NuFIT 6.0 and dCP = 177 deg in both orderings, the nuisance parameters at the best
    fit of the data: the inverted-ordering fit of all 13 parameters (fig_full_fit_validation), the weighted bin average
@@ -45,7 +46,7 @@ def task(args):
                                     for m in icfit.DM32_GRID])
     if kind == 'data_io_splitting':
         r = fitter('data').fit('IO', hs_reading='splitting')
-        return kind, arg, (r.chi2, r.values['dm31'])
+        return kind, arg, (r.chi2, r.values)
     if kind == 'data_dm21':
         f = fitter('data_dm21')
         return kind, arg, tuple(f.fit(o).values['dm31'] for o in ('NO', 'IO'))
@@ -91,8 +92,15 @@ def main():
                contour_extent=np.array([line[:, 0].min(), line[:, 0].max(), line[:, 1].min(), line[:, 1].max()]))
     for kind, arg, value in done:
         if kind == 'data_io_splitting':
-            out['data_io_splitting_chi2'], out['data_io_splitting_dm31'] = value
-            out['data_b_splitting'] = intercept(value[1], no.values['dm31'])
+            chi2, values = value
+            out['data_io_splitting_chi2'], out['data_io_splitting_dm31'] = chi2, values['dm31']
+            out['data_io_splitting_values'] = np.array([values[k] for k in icfit.NAMES])
+            out['data_b_splitting'] = intercept(values['dm31'], no.values['dm31'])
+            # observed and expected counts per bin at the three best fits (fig_deepcore_data_vs_model)
+            out['observed'] = data.observed
+            for tag, v, reading in (('no', no.values, 'matched'), ('io', io.values, 'matched'),
+                                    ('io_splitting', values, 'splitting')):
+                out[f'expected_{tag}'], out[f'variance_{tag}'] = data.predict(v, reading)
         elif kind == 'data_dm21':
             out['data_b_dm21_nufit'] = intercept(value[1], value[0])
     asimov = {arg: value for kind, arg, value in done if kind == 'asimov'}
