@@ -5,6 +5,8 @@
   </picture>
 </h1>
 
+<p align="center"><a href="https://doi.org/10.5281/zenodo.24304049"><img src="https://zenodo.org/badge/1460194275.svg" alt="DOI"></a></p>
+
 Code and data that reproduce every figure and number of
 
 > V. Cerrone and M. Grassi, *Phenomenology of neutrino mass ordering synergies in reactor, accelerator, and
@@ -198,7 +200,7 @@ If you use this code, please cite the paper and the software:
 > atmospheric neutrino experiments, and the role of the detector response*, JHEP (2026), arXiv:2611.21252.
 
 > V. Cerrone and M. Grassi, *nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric
-> neutrino experiments as weighted bin averages*, version 1.2.1, Zenodo (2026), doi:10.5281/zenodo.XXXXXXX.
+> neutrino experiments as weighted bin averages*, version 1.2.1, Zenodo (2026), doi:10.5281/zenodo.24304050.
 
 ```bibtex
 @article{Cerrone:2026nmo,
@@ -216,7 +218,7 @@ If you use this code, please cite the paper and the software:
                experiments as weighted bin averages}",
     version = "1.2.1",
     year    = "2026",
-    doi     = "10.5281/zenodo.XXXXXXX",
+    doi     = "10.5281/zenodo.24304050",
     url     = "https://github.com/vanessacerrone/nmo-synergies"
 }
 ```
