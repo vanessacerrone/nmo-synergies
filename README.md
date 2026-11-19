@@ -201,7 +201,7 @@ If you use this code, please cite the paper and the software:
 > atmospheric neutrino experiments, and the role of the detector response*, JHEP (2026), arXiv:2611.21252.
 
 > V. Cerrone and M. Grassi, *nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric
-> neutrino experiments as weighted bin averages*, version 1.2.1, Zenodo (2026), doi:10.5281/zenodo.24304050.
+> neutrino experiments as weighted bin averages*, version 1.3.0, Zenodo (2026), doi:10.5281/zenodo.XXXXXXX.
 
 ```bibtex
 @article{Cerrone:2026nmo,
@@ -217,9 +217,9 @@ If you use this code, please cite the paper and the software:
     author  = "Cerrone, Vanessa and Grassi, Marco",
     title   = "{nmo-synergies: wrong-ordering solutions of reactor, accelerator, and atmospheric neutrino
                experiments as weighted bin averages}",
-    version = "1.2.1",
+    version = "1.3.0",
     year    = "2026",
-    doi     = "10.5281/zenodo.24304050",
+    doi     = "10.5281/zenodo.XXXXXXX",
     url     = "https://github.com/vanessacerrone/nmo-synergies"
 }
 ```
