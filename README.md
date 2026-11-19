@@ -38,8 +38,8 @@ from nmosyn.params import DCP_IO, DCP_NO, X0, b_lbl, b_sbr, intercept
 
 y = Juno().solution(X0)              # JUNO at the true splitting X0: the wrong-ordering solution, Eq. (2.3)
 print(intercept(y, X0))              # its intercept b: 25.66 (in 1e-6 eV^2)
-print(b_sbr() * 1e6)                 # short-baseline reactor, Eq. (3.7): 45.99
-print(b_lbl(DCP_NO, DCP_IO) * 1e6)   # accelerator closed form, Eq. (3.4): 110.56
+print(b_sbr() * 1e6)                 # short-baseline reactor, Eq. (3.9): 45.99
+print(b_lbl(DCP_NO, DCP_IO) * 1e6)   # accelerator closed form, Eq. (3.6): 110.56
 ```
 
 ## Quick start
@@ -80,7 +80,7 @@ section uses, edit its script in `compute/`.
 
 | path | content |
 |---|---|
-| `nmosyn/params.py` | NuFIT 6.0 inputs (App. A.1), closed forms of Eqs. (3.4) and (3.7), solar phase (App. C.1) |
+| `nmosyn/params.py` | NuFIT 6.0 inputs (App. A.1), closed forms of Eqs. (3.6) and (3.9), solar phase (App. C.1) |
 | `nmosyn/earth.py` | PREM and the layers of constant density along a path, from production in the atmosphere to the detector |
 | `nmosyn/osc.py` | three-flavor probabilities in vacuum, at constant density, and through the Earth |
 | `nmosyn/flux.py` | Honda atmospheric neutrino flux tables |
@@ -117,7 +117,7 @@ each: `fig_accelerator_closed_form.py` also writes `fig_juno_intercept_vs_resolu
 | `fig_published_best_fits` | Sec. 5 | published best fits with the computed lines and bands | `bands`, `icfit`, `measured`, `vacuum` |
 | `fig_synergy_vs_precision` | Sec. 6 | synergy of two experiments against their common precision | `bands`, `vacuum` |
 | `fig_synergy_rings` | Sec. 6 | synergy of JUNO with DeepCore and with NOvA | `bands`, `vacuum` |
-| `fig_accelerator_nubar_share` | not in the paper | shift of the accelerator intercept from Eq. (3.4), against the antineutrino share; its values are quoted in App. C.2 | `vacuum` |
+| `fig_accelerator_nubar_share` | not in the paper | shift of the accelerator intercept from Eq. (3.6), against the antineutrino share; its values are quoted in App. C.2 | `vacuum` |
 | `fig_juno_effective_energy` | App. C | JUNO weights and the effective energy of the solar phase | `vacuum` |
 | `fig_deepcore_analytic` | not in the paper | DeepCore nu_mu disappearance, exact and analytic; its shares are quoted in App. D.1 | `analytic` |
 | `fig_full_fit_validation` | App. E | weighted bin average against the full fit of the DeepCore release | `deepcore`, `icfit` |
@@ -172,7 +172,7 @@ Intercepts are stored, printed, and plotted in 10⁻⁶ eV², and degrees appear
 - `make numbers` prints every number of the paper that the code computes, with its place in the TeX source, the
   quoted value, and the computed one, and marks with MOVED any number that no longer agrees.
 - `make test` checks the same numbers within their tolerances, and the physics: the vacuum limit and unitarity of
-  the probabilities, the path geometry and the convergence of the layers, the closed form of Eq. (3.4) recovered
+  the probabilities, the path geometry and the convergence of the layers, the closed form of Eq. (3.6) recovered
   by the weighted bin average, the Gauss-Newton solution equal to the minimum of the chi², and the exact
   harmonic expansion of the fit. With a C++ compiler, it also compares `nmosyn/osc.py` with the original
   NuFast-Earth.

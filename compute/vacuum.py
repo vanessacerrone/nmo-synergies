@@ -2,9 +2,9 @@
 fig_juno_intercept_vs_resolution, fig_accelerator_nubar_share, fig_juno_effective_energy, and the JUNO lines.
 
 Generic beam (fig_accelerator_closed_form): b against the true delta_CP with delta_CP^IO = 285 deg, and on a 30-deg grid
-of both phases for the band over delta_CP^IO. JUNO (fig_juno_intercept_vs_resolution): b against the stochastic term
-a_res, with b_res and c_res scaled with it, in matter and in vacuum, and the line on X_GRID at the baseline a_res =
-2.61%. fig_accelerator_nubar_share (not in the paper, values in App. C.2): the shift from the closed form against the
+of both phases for the band over delta_CP^IO. JUNO (fig_juno_intercept_vs_resolution): b against the resolution
+sigma_E / E at 1 MeV, the three terms scaled together, in matter and in vacuum, and the line on X_GRID at the baseline,
+2.94% at 1 MeV (a_res = 2.61%). fig_accelerator_nubar_share (not in the paper, values in App. C.2): the shift from the closed form against the
 antineutrino share. fig_juno_effective_energy: the JUNO weights per bin and the effective energy. theta23 and the phases
 are fixed in these fits, so the Gauss-Newton iteration of App. B.3 in Dm31_IO alone gives the solution. Sec. 5: the NOvA
 disappearance band of fig_intercept_vs_truth (left) without matter, at x0 over the true delta_CP, as in compute.bands
@@ -24,8 +24,9 @@ from nmosyn.paths import RESULTS
 
 DCP_LINE = np.radians(np.arange(-180.0, 180.1, 5.0))
 DCP_GRID = np.radians(np.arange(-180.0, 180.1, 30.0))
-A_RES = np.sort(np.append(np.arange(0.0, 0.0801, 0.0025), juno.A_RES))      # the scan and the baseline, 2.61%
-A_EEFF = np.array([0.0, 0.01, 0.02, juno.A_RES, 0.05, 0.08])
+R1_RES = np.sort(np.append(np.arange(0.0, 0.0901, 0.0025), juno.R1_RES))   # resolution at 1 MeV: scan and baseline
+R1_EEFF = np.array([0.0, 0.01, 0.02, juno.R1_RES, 0.05, 0.08])
+A_RES, A_EEFF = (r * juno.A_RES / juno.R1_RES for r in (R1_RES, R1_EEFF))     # the same, as stochastic terms
 SHARES = np.linspace(0.0, 0.5, 11)
 
 
@@ -37,7 +38,8 @@ def solve(model, x, dcp_no, dcp_io, s23sq=S23SQ):
 
 
 def main():
-    out = dict(dcp_line=DCP_LINE, dcp_grid=DCP_GRID, a_res=A_RES, a_eeff=A_EEFF, shares=SHARES, x=X_GRID)
+    out = dict(dcp_line=DCP_LINE, dcp_grid=DCP_GRID, a_res=A_RES, a_eeff=A_EEFF, r1_res=R1_RES, r1_eeff=R1_EEFF,
+               shares=SHARES, x=X_GRID)
 
     beam = lbl.generic_beam()
     out['beam_b_line'] = np.array([solve(beam, X0, d, DCP_IO) for d in DCP_LINE])

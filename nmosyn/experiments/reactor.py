@@ -3,7 +3,7 @@
 The emitted spectrum is the Huber-Mueller model, P. Huber, Phys. Rev. C 84 (2011) 024617 (235U, 239Pu,
 241Pu) and Th. A. Mueller et al., Phys. Rev. C 83 (2011) 054615 (238U), summed with the fission fractions of a
 commercial pressurized-water reactor. The cross section is the approximation of Eq. (25) of A. Strumia and
-F. Vissani, Phys. Lett. B 564 (2003) 42. The short-baseline closed form (Eq. 3.7) and the solar phase
+F. Vissani, Phys. Lett. B 564 (2003) 42. The short-baseline closed form (Eq. 3.9) and the solar phase
 (App. C.1) are in `nmosyn.params` (`b_sbr`, `dm2_phi_ee`).
 """
 import numpy as np

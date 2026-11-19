@@ -1,4 +1,4 @@
-"""fig_accelerator_nubar_share: shift of the accelerator intercept from the closed form of Eq. (3.4), against the nubar
+"""fig_accelerator_nubar_share: shift of the accelerator intercept from the closed form of Eq. (3.6), against the nubar
 share.
 
 NOvA-like (810 km, 2 GeV) and T2K-like (295 km, 0.6 GeV) beams in matter, sigma_E/E = 10%,

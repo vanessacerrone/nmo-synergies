@@ -2,7 +2,7 @@
 
 All probabilities are the exact three-flavor ones at constant crust density. The generic beam has nu_mu disappearance
 only, with a Gaussian flux, a cross section rising like E, and a Gaussian energy resolution. It serves the closed-form
-checks of Sec. 3 (fig_accelerator_closed_form, Eq. (3.4)) and the antineutrino share of App. C.2
+checks of Sec. 3 (fig_accelerator_closed_form, Eq. (3.6)) and the antineutrino share of App. C.2
 (fig_accelerator_nubar_share). NOvA and T2K have nu_mu disappearance and nu_e appearance in both beam modes, with the
 spectra of lbl_spectra.
 """

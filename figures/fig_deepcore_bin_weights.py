@@ -34,14 +34,16 @@ def main() -> None:
 
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(12.14, 5.0), gridspec_kw=dict(wspace=0.30))
     mesh = a1.pcolormesh(e, cz, share * 100, cmap='RdPu', shading='flat')
-    fig.colorbar(mesh, ax=a1, pad=0.03).set_label(r'Share of statistical weight $\omega_i/\sum\omega$ [\%]',
-                                                   fontsize=15)
+    bar1 = fig.colorbar(mesh, ax=a1, pad=0.03)
+    bar1.set_label(r'Share of statistical weight $\omega_i/\sum\omega$ [\%]', fontsize=15)
     a2.set_facecolor('0.78')
     mesh = a2.pcolormesh(e, cz, shown, cmap='RdBu', shading='flat', vmin=y_abs - HALF_RANGE,
                          vmax=y_abs + HALF_RANGE)
-    fig.colorbar(mesh, ax=a2, pad=0.03).set_label(
-        'Value preferred by the bin\n' + r'$|y_i|\ [10^{-3}\,\mathrm{eV}^2]$',
-        fontsize=15)
+    bar2 = fig.colorbar(mesh, ax=a2, pad=0.03)
+    bar2.set_label('Value preferred by the bin\n' + r'$|y_i|\ [10^{-3}\,\mathrm{eV}^2]$', fontsize=15)
+    for bar in (bar1, bar2):            # vector color bars: matplotlib rasterizes them by default
+        bar.solids.set_rasterized(False)
+        bar.solids.set_edgecolor('face')    # no hairline seams between the color steps
 
     for ax, title in zip((a1, a2), TITLES):
         box = BOX if ax is a1 else None

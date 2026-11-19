@@ -12,7 +12,7 @@ matter shift of one mantle path in narrow energy bins, against the second-order 
 The CP residual (App. D.2): b(180, 180 deg) - b(0, 0) for nu_mu disappearance with theta23 fixed, to first order in
 the expected counts a sum over the true cells, grouped by A-hat = A / Dm31 at the mean rho*Ye of each path, with
 and without matter, at sin^2 theta23 = 0.561, at maximal mixing, and in the mirror octant; and without matter, b
-minus Eq. (3.4) with the same delta_CP in both orderings (App. D.1). The amplitude term of Eq. (D.4) on the mantle
+minus Eq. (3.6) with the same delta_CP in both orderings (App. D.1). The amplitude term of Eq. (D.4) on the mantle
 path (App. D.2): the cos(delta_CP) part of the exact P_mumu at constant density, per unit of its oscillation
 sin^2, split into the part odd in cos 2theta23 (sin^2 theta23 = 0.561 against its mirror 0.439), which Eq. (D.4)
 describes, and the even part, which it does not.

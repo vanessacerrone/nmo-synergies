@@ -1,7 +1,7 @@
 """fig_published_best_fits: published best fits in the (Dm31_NO, Dm31_IO) plane with the computed lines and bands (Sec.
 5).
 
-Lines: the short-baseline reactor (Eq. 3.7) and JUNO at a_res = 2.61%. Bands: NOvA with appearance and IceCube DeepCore
+Lines: the short-baseline reactor (Eq. 3.9) and JUNO at 2.94% at 1 MeV (a_res = 2.61%). Bands: NOvA with appearance and IceCube DeepCore
 with all channels, delta_CP and theta23 unknown (as fig_solutions_plane). Points: our fit of the DeepCore public data
 (App. E) and the published best fits of data/published_best_fits.json, Dm32 + Dm21 for the experiments that quote Dm32.
 Reads results/vacuum.npz, results/bands.npz, results/measured.npz, and results/icfit.npz. Run from the repository root:
@@ -75,9 +75,9 @@ def main() -> None:
     x = XZ * 1e3
     fig, ax = plt.subplots(figsize=(10.1, 5.6))
     fig.subplots_adjust(left=0.10, right=0.68, top=0.96, bottom=0.13)
-    ax.plot(x, (b_sbr() - XZ) * 1e3, '-', color=style.COLORS['sbr'], lw=2.2, label='Short-baseline reactor')
+    ax.plot(x, (b_sbr() - XZ) * 1e3, '-', color=style.COLORS['sbr'], lw=2.2, label='Short-baseline reactor (Daya Bay)')
     ax.plot(x, np.interp(XZ, vac['x'], vac['juno_y']) * 1e3, '-', color=style.COLORS['juno'], lw=2.2,
-            label=r'JUNO ($a_{\rm res}=2.61\%$)')
+            label=r'JUNO (2.94\% at 1 MeV)')
     (nova_lo, nova_hi), (dc_lo, dc_hi) = band(bands, 'nova_all'), band(bands, 'dca')
     style.bands(ax, x, [dict(lo=nova_lo, hi=nova_hi, color=style.COLORS['nova'], shade=0.25, lw=1.2,
                              label=r'NOvA, $\nu_\mu$ dis. + $\nu_e$ app. (band)'),

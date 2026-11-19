@@ -2,8 +2,8 @@
 JUNO (right) near the vacuum limit (Sec. 3).
 
 Left, fig_accelerator_closed_form: generic 810 km beam, b against the true delta_CP at delta_CP^IO = 285 deg, the closed
-form of Eq. (3.4), and the range of b over delta_CP^IO. Right, fig_juno_intercept_vs_resolution: JUNO, b against the
-stochastic term of the energy resolution, the short-baseline value of Eq. (3.7), and Eq. (3.8) with the solar phase at 4
+form of Eq. (3.6), and the range of b over delta_CP^IO. Right, fig_juno_intercept_vs_resolution: JUNO, b against the
+stochastic term of the energy resolution, the short-baseline value of Eq. (3.9), and Eq. (3.10) with the solar phase at 4
 MeV. Reads results/vacuum.npz. Run from the repository root: python -m figures.fig_accelerator_closed_form
 """
 from collections.abc import Mapping
@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from nmosyn import style
+from nmosyn.experiments import juno as juno_model
 from nmosyn.params import DCP_IO, b_lbl, b_sbr
 from nmosyn.paths import RESULTS
 
@@ -29,7 +30,7 @@ def accelerator(v: Mapping[str, np.ndarray]) -> None:
     ax.fill_between(grid_deg, v['beam_b_grid'].min(axis=1), v['beam_b_grid'].max(axis=1),
                     color=style.opaque(color, 0.25), lw=0, label=r'all values of $\delta^{\rm IO}_{\rm CP}$')
     closed_deg = np.arange(-180.0, 180.1, 1.0)
-    ax.plot(closed_deg, b_lbl(np.radians(closed_deg), DCP_IO) * 1e6, '-', color='k', lw=1.6,
+    ax.plot(closed_deg, b_lbl(np.radians(closed_deg), DCP_IO) * 1e6, '--', color='k', lw=1.6,
             label=r'Closed form, $(\kappa_\mu^{\rm NO}+\kappa_\mu^{\rm IO})\Delta m^2_{21}$')
     ax.plot(np.degrees(v['dcp_line'])[::3], v['beam_b_line'][::3], color=color, **POINT,
             label='Weighted bin average, matter,' + '\n' + r'equal $\nu$ and $\bar\nu$ event samples')
@@ -44,7 +45,7 @@ def accelerator(v: Mapping[str, np.ndarray]) -> None:
 
 
 def juno(v: Mapping[str, np.ndarray]) -> None:
-    """Right panel, fig_juno_intercept_vs_resolution: line on every a_res, points every 1%."""
+    """Right panel, fig_juno_intercept_vs_resolution: line on every resolution at 1 MeV, points every 1%."""
     fig, ax = plt.subplots(figsize=CANVAS)
     color = style.COLORS['juno']
     sbr = b_sbr() * 1e6
@@ -52,17 +53,17 @@ def juno(v: Mapping[str, np.ndarray]) -> None:
                label='Short baseline, $2s^2_{12}\\Delta m^2_{21}$\n(any resolution)')
     ax.axhline(float(v['juno_b_closed_4mev']), color='k', ls='--', lw=1.6,
                label='Closed form, solar phase at 4 MeV')
-    a_pct = v['a_res'] * 100
-    ax.plot(a_pct, v['juno_b'], '-', color=color, lw=2.2)
-    every_pct = np.isclose(a_pct, np.round(a_pct))    # whole percents; the scan also holds the baseline 2.61%
-    ax.plot(a_pct[every_pct], v['juno_b'][every_pct], color=color, **POINT,
+    r_pct = v['r1_res'] * 100
+    ax.plot(r_pct, v['juno_b'], '-', color=color, lw=2.2)
+    every_pct = np.isclose(r_pct, np.round(r_pct))    # whole percents; the scan also holds the baseline 2.94%
+    ax.plot(r_pct[every_pct], v['juno_b'][every_pct], color=color, **POINT,
             label='Weighted bin average,\nJUNO (eight cores, matter)')
-    baseline = np.isclose(a_pct, 2.61)
-    ax.plot(a_pct[baseline], v['juno_b'][baseline], color='w', **{**POINT, 'marker': 'D', 'ms': 7.5},
-            label=r'JUNO resolution, $a_{\rm res}=2.61\%$')
-    ax.set_xlim(a_pct[0], a_pct[-1])
+    baseline = np.isclose(r_pct, juno_model.R1_RES * 100)
+    ax.plot(r_pct[baseline], v['juno_b'][baseline], color='w', **{**POINT, 'marker': 'D', 'ms': 7.5},
+            label=fr'{juno_model.R1_RES * 100:.2f}\% at 1 MeV')
+    ax.set_xlim(r_pct[0], r_pct[-1])
     ax.set_ylim(0, sbr + 5)
-    ax.set_xlabel(r'Stochastic term $a_{\rm res}$ of the energy resolution [\%]')
+    ax.set_xlabel(r'Energy resolution $\sigma_E/E$ at 1 MeV [\%]')
     ax.set_ylabel(BL)
     ax.legend(loc='lower right')
     style.save(fig, 'fig_juno_intercept_vs_resolution', style.W_PAIR, PAIR_HEIGHT)

@@ -43,7 +43,7 @@ def panel(ax: Axes, bands: Mapping[str, np.ndarray], scan: str, x: np.ndarray,
         ax.plot(*to_axis(x, bands[f'{sample}/{scan}/b/{IX}']), '-', color=color, lw=2.4)
     xs, cf = to_axis(x, bands[f'nova_dis/{scan}/cf/{IX}'])
     for edge in cf.T:
-        ax.plot(xs, edge, ':', color='k', lw=1.6)
+        ax.plot(xs, edge, '--', color='k', lw=1.6)
 
 
 def main() -> None:
@@ -70,7 +70,7 @@ def main() -> None:
     nova_band = (Patch(facecolor=shade, edgecolor=shade, lw=0),
                  Line2D([], [], color=style.COLORS['nova'], lw=2.0))
     handles = [nova_band, Line2D([], [], color=style.COLORS['nova_app'], lw=2.4),
-               Line2D([], [], color='k', ls=':', lw=1.6),
+               Line2D([], [], color='k', ls='--', lw=1.6),
                Line2D([], [], color=style.COLORS['dc_numu'], lw=2.4),
                Line2D([], [], color=style.COLORS['dc_all'], lw=2.4)]
     labels = [r'NOvA, $\nu_\mu$ disappearance', r'NOvA, $\nu_\mu$ disappearance + $\nu_e$ appearance',

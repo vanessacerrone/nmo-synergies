@@ -60,7 +60,7 @@
    "id": "sec3.lbl_agree",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:270",
-   "quantity": "generic beam minus Eq. (3.4), max over dCP",
+   "quantity": "generic beam minus Eq. (3.6), max over dCP",
    "paper": "0.1",
    "paper_values": [
     0.1
@@ -74,7 +74,7 @@
    "id": "sec3.eq36_103p8",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:259",
-   "quantity": "2 c12^2 Dm21 of Eq. (3.6)",
+   "quantity": "2 c12^2 Dm21 of Eq. (3.8)",
    "paper": "103.8",
    "paper_values": [
     103.8
@@ -102,7 +102,7 @@
    "id": "sec3.lbl_unequal",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:283",
-   "quantity": "NOvA-like nu only minus Eq. (3.4), dCP 177, 0 deg",
+   "quantity": "NOvA-like nu only minus Eq. (3.6), dCP 177, 0 deg",
    "paper": "a few",
    "paper_values": [],
    "new": [
@@ -129,19 +129,21 @@
    "id": "sec3.juno_resolution",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:307",
-   "quantity": "sigma_E / E [%] of JUNO at 1 MeV from a, b, c (the paper quotes JUNO)",
-   "paper": "2.95%",
-   "paper_values": [],
+   "quantity": "sigma_E / E [%] of JUNO at 1 MeV from a, b, c",
+   "paper": "2.94%",
+   "paper_values": [
+    2.94
+   ],
    "new": [
     2.9430766214966275
    ],
-   "moved": null
+   "moved": false
   },
   {
    "id": "sec3.juno_b",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:307",
-   "quantity": "JUNO b at a_res = 2.61%",
+   "quantity": "JUNO b at 2.94% at 1 MeV",
    "paper": "25.7",
    "paper_values": [
     25.7
@@ -155,13 +157,13 @@
    "id": "sec3.juno_2to4",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:307",
-   "quantity": "JUNO b(a_res = 4%) - b(2%)",
+   "quantity": "JUNO b(4% at 1 MeV) - b(2% at 1 MeV)",
    "paper": "about 10",
    "paper_values": [
     10.0
    ],
    "new": [
-    9.736805001329259
+    9.801578899650256
    ],
    "moved": false
   },
@@ -169,7 +171,7 @@
    "id": "sec3.eeff_juno",
    "section": "Sec. 3: reactors and accelerators, fig_accelerator_closed_form and fig_juno_intercept_vs_resolution",
    "location": "Sec. 3, main:312",
-   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "quantity": "E_eff [MeV] at 2.94% at 1 MeV",
    "paper": "about 4 MeV",
    "paper_values": [
     4.0
@@ -834,7 +836,7 @@
    "id": "sec5.juno_on_line",
    "section": "Sec. 5: unknown delta_CP and theta23, fig_solutions_plane, fig_intercept_ranges, fig_intercept_vs_truth, and fig_published_best_fits",
    "location": "Sec. 5, main:525",
-   "quantity": "JUNO line (a_res = 2.61%) at the measured x",
+   "quantity": "JUNO line (2.94% at 1 MeV) at the measured x",
    "paper": "consistent with the line",
    "paper_values": [],
    "new": [
@@ -1401,7 +1403,7 @@
    "id": "appA.b_sbr",
    "section": "App. A: inputs and detector models",
    "location": "App. A, app:23",
-   "quantity": "2 s12^2 Dm21, Eq. (3.7)",
+   "quantity": "2 s12^2 Dm21, Eq. (3.9)",
    "paper": "46.0",
    "paper_values": [
     46.0
@@ -1674,7 +1676,7 @@
    "id": "appC.eeff_0",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:231",
-   "quantity": "E_eff [MeV] at a_res = 0",
+   "quantity": "E_eff [MeV] for a perfect resolution",
    "paper": "3.5 MeV",
    "paper_values": [
     3.5
@@ -1688,7 +1690,7 @@
    "id": "appC.eeff_juno",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:231",
-   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "quantity": "E_eff [MeV] at 2.94% at 1 MeV",
    "paper": "4.1 MeV",
    "paper_values": [
     4.1
@@ -1699,16 +1701,16 @@
    "moved": false
   },
   {
-   "id": "appC.ares_cross",
+   "id": "appC.res_cross",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:231",
-   "quantity": "a_res [%] where JUNO b equals the 4 MeV closed form",
-   "paper": "2.3%",
+   "quantity": "resolution at 1 MeV [%] where JUNO b equals the 4 MeV closed form",
+   "paper": "2.6%",
    "paper_values": [
-    2.3
+    2.6
    ],
    "new": [
-    2.270177113430171
+    2.5607362395102844
    ],
    "moved": false
   },
@@ -1716,7 +1718,7 @@
    "id": "appC.offset",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:220",
-   "quantity": "DeepCore without matter - Eq. (3.4), theta23 fixed and fitted (max)",
+   "quantity": "DeepCore without matter - Eq. (3.6), theta23 fixed and fitted (max)",
    "paper": "below 1",
    "paper_values": [
     1.0
@@ -1759,7 +1761,7 @@
    "id": "appC.nova_like",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:227",
-   "quantity": "Eq. (3.4) minus NOvA-like beam, neutrinos only, dCP 177, 0 deg",
+   "quantity": "Eq. (3.6) minus NOvA-like beam, neutrinos only, dCP 177, 0 deg",
    "paper": "4 to 7",
    "paper_values": [
     4.0,
@@ -1775,7 +1777,7 @@
    "id": "appC.t2k_like",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:227",
-   "quantity": "T2K-like beam minus Eq. (3.4), all shares (max)",
+   "quantity": "T2K-like beam minus Eq. (3.6), all shares (max)",
    "paper": "below 0.5",
    "paper_values": [
     0.5
@@ -1789,7 +1791,7 @@
    "id": "appC.equal_shares",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:227",
-   "quantity": "b - Eq. (3.4), equal shares, dCP 177, 0: NOvA-like, T2K-like",
+   "quantity": "b - Eq. (3.6), equal shares, dCP 177, 0: NOvA-like, T2K-like",
    "paper": "cancels for equal shares",
    "paper_values": [],
    "new": [
@@ -1845,7 +1847,7 @@
    "id": "appC.cf4_gap",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:231",
-   "quantity": "JUNO b at a_res = 2.61% minus the 4 MeV closed form",
+   "quantity": "JUNO b at 2.94% at 1 MeV minus the 4 MeV closed form",
    "paper": "2",
    "paper_values": [
     2.0
@@ -1859,7 +1861,7 @@
    "id": "appC.eq38",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:231",
-   "quantity": "|Eq. (3.8) - weighted bin average| of JUNO at a_res = 2.61%",
+   "quantity": "|Eq. (3.10) - weighted bin average| of JUNO at 2.94% at 1 MeV",
    "paper": "1",
    "paper_values": [
     1.0
@@ -1870,10 +1872,10 @@
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a0",
+   "id": "fig_juno_effective_energy.eeff.r0",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 0%",
+   "quantity": "E_eff [MeV] at 0% at 1 MeV",
    "paper": "3.5",
    "paper_values": [
     3.5
@@ -1884,38 +1886,38 @@
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a1",
+   "id": "fig_juno_effective_energy.eeff.r1",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 1%",
-   "paper": "3.6",
+   "quantity": "E_eff [MeV] at 1% at 1 MeV",
+   "paper": "3.5",
    "paper_values": [
-    3.6
+    3.5
    ],
    "new": [
-    3.5725526679512645
+    3.547738211541453
    ],
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a2",
+   "id": "fig_juno_effective_energy.eeff.r2",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 2%",
-   "paper": "3.9",
+   "quantity": "E_eff [MeV] at 2% at 1 MeV",
+   "paper": "3.8",
    "paper_values": [
-    3.9
+    3.8
    ],
    "new": [
-    3.8914435021930265
+    3.80595092085973
    ],
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a2.61",
+   "id": "fig_juno_effective_energy.eeff.r2.94",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 2.61%",
+   "quantity": "E_eff [MeV] at 2.94% at 1 MeV",
    "paper": "4.1",
    "paper_values": [
     4.1
@@ -1926,30 +1928,30 @@
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a5",
+   "id": "fig_juno_effective_energy.eeff.r5",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 5%",
-   "paper": "5.3",
+   "quantity": "E_eff [MeV] at 5% at 1 MeV",
+   "paper": "5.0",
    "paper_values": [
-    5.3
+    5.0
    ],
    "new": [
-    5.277731280288216
+    5.017615085525527
    ],
    "moved": false
   },
   {
-   "id": "fig_juno_effective_energy.eeff.a8",
+   "id": "fig_juno_effective_energy.eeff.r8",
    "section": "App. C: reactors and accelerators, fig_juno_effective_energy",
    "location": "App. C, app:237",
-   "quantity": "E_eff [MeV] at a_res = 8%",
-   "paper": "6.4",
+   "quantity": "E_eff [MeV] at 8% at 1 MeV",
+   "paper": "6.1",
    "paper_values": [
-    6.4
+    6.1
    ],
    "new": [
-    6.397230031213076
+    6.104287491263183
    ],
    "moved": false
   },

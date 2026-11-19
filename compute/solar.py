@@ -2,7 +2,7 @@
 
 Dm21 and sin^2 theta12 are moved by +-REL, the relative precision of the JUNO measurement after 207 days
 (JUNO, arXiv:2609.37895: 1.1% on Dm21, 2.1% on sin^2 theta12), and each intercept at x0 changes by half the
-difference: JUNO (Eq. 2.3, design configuration), the closed form of Eq. (3.4) for NOvA on the 30-deg grid of both
+difference: JUNO (Eq. 2.3, design configuration), the closed form of Eq. (3.6) for NOvA on the 30-deg grid of both
 phases, and DeepCore with all channels, theta23 and both phases fixed. Output: results/solar.npz.
 Run from the repository root: python -m compute.solar
 """

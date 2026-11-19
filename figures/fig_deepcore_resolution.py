@@ -43,7 +43,7 @@ def window(d: Mapping[str, np.ndarray]) -> tuple[Figure, Axes]:
     ax.xaxis.set_minor_formatter(NullFormatter())
     ax.set_xlim(6.0, e_max[-1])         # room for the first point, at 6.31 GeV, inside the frame
     ax.set_ylim(top=150)
-    ax.set_xlabel(r'Varied edge of the energy window [GeV]')
+    ax.set_xlabel(r'Varied edge of the energy range [GeV]')
     ax.set_ylabel(BL)
     ax.text(30, 136, 'upper edge', color=color, fontsize=13)
     ax.text(28, 112.6, 'lower edge', color=color, fontsize=13)
@@ -52,7 +52,7 @@ def window(d: Mapping[str, np.ndarray]) -> tuple[Figure, Axes]:
                Line2D([], [], ls='--', lw=2.0, color=color, marker='s', **POINT),
                Line2D([], [], ls=':', lw=1.6, color='k')]
     labels = ['Upper edge varied, lower edge at 6.31 GeV', 'Lower edge varied, upper edge at 158.5 GeV',
-              'Full window 6.31--158.5 GeV']
+              'Full range 6.31--158.5 GeV']
     ax.legend(handles, labels, loc='lower center', bbox_to_anchor=(0.5, 1.01), handlelength=2.6,
               title='DeepCore resolution (public simulation)')
     return fig, ax
@@ -71,7 +71,7 @@ def resolution(d: Mapping[str, np.ndarray], b_tabulated: float, top: float) -> F
     ax.set_xlim(sigma[0], sigma[-1])
     ax.set_xlabel(r'Energy resolution $\sigma_{\ln E}$')
     ax.set_ylabel(BL)
-    ax.legend(loc='lower center', title=r'DeepCore acceptance, window 6.31--158.5 GeV')
+    ax.legend(loc='lower center', title=r'DeepCore acceptance, range 6.31--158.5 GeV')
     y0 = ax.get_position().y1
     fig.add_artist(Line2D([0.5, 0.5], [y0, y0 + top / fig.get_figheight()], transform=fig.transFigure,
                           ls='none'))

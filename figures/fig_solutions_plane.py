@@ -1,6 +1,6 @@
 """fig_solutions_plane: wrong-ordering solutions in the (Dm31_NO, Dm31_IO) plane, delta_CP and theta23 unknown (Sec. 5).
 
-Lines: the short-baseline reactor (Eq. 3.7) and JUNO at a_res = 2.61%. Bands: NOvA, T2K, and IceCube DeepCore, the range
+Lines: the short-baseline reactor (Eq. 3.9) and JUNO at 2.94% at 1 MeV (a_res = 2.61%). Bands: NOvA, T2K, and IceCube DeepCore, the range
 of b over the true points of the NuFIT 6.0 3 sigma ranges and over the valley rule of App. B.3, at three true
 splittings; the band edges are linear in Dm31_NO between them. Reads results/vacuum.npz and results/bands.npz. Run from
 the repository root: python -m figures.fig_solutions_plane
@@ -46,7 +46,7 @@ def main() -> None:
         ax.plot(x, (b_sbr() - XZ) * 1e3, '-', color=style.COLORS['sbr'], lw=2.2,
                 label='Short-baseline reactor (Daya Bay)')
         ax.plot(x, np.interp(XZ, vac['x'], vac['juno_y']) * 1e3, '-', color=style.COLORS['juno'], lw=2.2,
-                label=r'JUNO ($a_{\rm res}=2.61\%$)')
+                label=r'JUNO (2.94\% at 1 MeV)')
         nova_lo, nova_hi = band(bands, f'nova_{channel}')
         dc_lo, dc_hi = band(bands, dc)
         style.bands(ax, x, [dict(lo=nova_lo, hi=nova_hi, color=style.COLORS['nova'], shade=0.35,
@@ -55,8 +55,10 @@ def main() -> None:
         lo, hi = band(bands, f't2k_{channel}')
         ax.plot(x, lo, '--', color=style.COLORS['t2k'], lw=1.8, zorder=4, label=f'T2K, {channel_label}')
         ax.plot(x, hi, '--', color=style.COLORS['t2k'], lw=1.8, zorder=4)
-        ax.plot(x, dc_lo, '-', color=dc_color, lw=2.0, zorder=5, label=dc_label)
+        ax.plot(x, dc_lo, '-', color=dc_color, lw=2.0, zorder=5)
         ax.plot(x, dc_hi, '-', color=dc_color, lw=2.0, zorder=5)
+        # legend entry as drawn: light fill with solid edges (empty, only for the legend)
+        ax.fill_between([], [], [], facecolor=style.opaque(dc_color, 0.15), edgecolor=dc_color, lw=2.0, label=dc_label)
         ax.set_title(title)
         ax.set_xlim(2.425, 2.625)
         ax.set_xticks([2.45, 2.50, 2.55, 2.60], ['2.45', '2.50', '2.55', '2.60'])

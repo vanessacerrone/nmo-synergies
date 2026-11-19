@@ -173,7 +173,7 @@ def slope_deviation(x: np.ndarray, b: np.ndarray) -> float:
 
 
 def juno_dc_slopes(r: Results) -> tuple[float, float]:
-    """Largest |1 + dy/dx| [%] of JUNO (a_res = 2.61%) and of DeepCore nu_mu with theta23 fixed (Sec. 2)."""
+    """Largest |1 + dy/dx| [%] of JUNO (2.94% at 1 MeV) and of DeepCore nu_mu with theta23 fixed (Sec. 2)."""
     v, d = r['vacuum'], r['deepcore']
     juno = slope_deviation(v['x'], intercept(v['juno_y'], v['x']))
     return juno, slope_deviation(d['x'], d['numu_fixed_line'])
@@ -189,23 +189,24 @@ def orca_x0(r: Results, key: str) -> float:
     return float(o[key][np.argmin(np.abs(o['x'] - X0))])
 
 
-def juno_b(r: Results, a_res: float) -> float:
-    """JUNO b at the stochastic term a_res, with b_res and c_res scaled with it (fig_juno_intercept_vs_resolution)."""
+def juno_b(r: Results, r1_res: float) -> float:
+    """JUNO b at the resolution r1_res at 1 MeV, the three terms scaled together (fig_juno_intercept_vs_resolution)."""
     v = r['vacuum']
-    return float(v['juno_b'][np.flatnonzero(np.isclose(v['a_res'], a_res))[0]])
+    return float(v['juno_b'][np.flatnonzero(np.isclose(v['r1_res'], r1_res))[0]])
 
 
 def juno_line(r: Results, x: float) -> float:
-    """b of JUNO at a_res = 2.61% at the true splitting x, from its line (fig_solutions_plane, fig_published_best_fits,
+    """b of JUNO at its resolution (2.94% at 1 MeV) at the true splitting x, from its line (fig_solutions_plane, fig_published_best_fits,
     fig_synergy_vs_precision, and fig_synergy_rings)."""
     v = r['vacuum']
     return float(np.interp(x, v['x'], intercept(v['juno_y'], v['x'])))
 
 
-def e_eff(r: Results, a_res: float) -> float:
-    """Effective energy [MeV] of the solar-phase term of JUNO (Eq. 3.8, fig_juno_effective_energy)."""
+def e_eff(r: Results, r1_res: float) -> float:
+    """Effective energy [MeV] of the solar-phase term of JUNO at the resolution r1_res at 1 MeV (Eq. 3.10,
+    fig_juno_effective_energy)."""
     v = r['vacuum']
-    return float(v['eeff_energy'][np.flatnonzero(np.isclose(v['a_eeff'], a_res))[0]])
+    return float(v['eeff_energy'][np.flatnonzero(np.isclose(v['r1_eeff'], r1_res))[0]])
 
 
 def dphi_peak(r: Results) -> float:
@@ -215,7 +216,7 @@ def dphi_peak(r: Results) -> float:
 
 
 def beam_shift(r: Results, beam: str, share: int, tag: str) -> float:
-    """b of a peaked beam minus the closed form of Eq. (3.4) (App. C.2, fig_accelerator_nubar_share); share 0: nu only,
+    """b of a peaked beam minus the closed form of Eq. (3.6) (App. C.2, fig_accelerator_nubar_share); share 0: nu only,
     -1: equal nu and nubar; tag 'nufit' (true delta_CP = 177 deg) or 'zero'."""
     v = r['vacuum']
     return float(v[f'{beam}_{tag}'][share] - v[f'closed_{tag}'])
@@ -419,8 +420,8 @@ def splitting(r: Results, ordering: str, shift: float = 0.0) -> tuple[float, flo
 
 
 def vacuum_limit(r: Results, theta23: str) -> float:
-    """Largest |b without matter - Eq. (3.4)| over the open points of fig_deepcore_dcp (delta_CP^IO = 285 deg), theta23
-    'fixed' in both orderings or 'fitted' (Eq. 3.4 at the fitted sin^2 theta23_IO) (App. C.1)."""
+    """Largest |b without matter - Eq. (3.6)| over the open points of fig_deepcore_dcp (delta_CP^IO = 285 deg), theta23
+    'fixed' in both orderings or 'fitted' (Eq. 3.6 at the fitted sin^2 theta23_IO) (App. C.1)."""
     d = r['deepcore']
     dcp = d['dcp_fig3']
     if theta23 == 'fixed':
@@ -429,7 +430,7 @@ def vacuum_limit(r: Results, theta23: str) -> float:
 
 
 def eq38_gap(r: Results, a_res: float) -> float:
-    """|Eq. (3.8) - weighted bin average| of JUNO at the stochastic term a_res (App. C.3, fig_juno_effective_energy)."""
+    """|Eq. (3.10) - weighted bin average| of JUNO at the stochastic term a_res (App. C.3, fig_juno_effective_energy)."""
     v = r['vacuum']
     i = np.flatnonzero(np.isclose(v['a_eeff'], a_res))[0]
     return float(abs(b_sbr() * 1e6 - v['eeff_average'][i] - v['eeff_b'][i]))
@@ -547,7 +548,7 @@ def sec2() -> list[Spec]:
     """Sec. 2 and fig_deepcore_bin_weights: the weighted bin average of DeepCore, bin by bin (Eq. 2.3), and the
     slopes."""
     return [
-        # the closed forms of Eqs. (3.4) and (3.7) do not depend on x, so their solutions have slope -1
+        # the closed forms of Eqs. (3.6) and (3.9) do not depend on x, so their solutions have slope -1
         Spec('sec2.slope_sbr_lbl', 177, 'dy/dx of the closed forms, reactor and accelerator ("slope close to -1")',
              '-1',
              lambda r: [slopes(X_GRID, np.full(X_GRID.size, b * 1e6)).mean()
@@ -561,24 +562,24 @@ def sec2() -> list[Spec]:
 
 def sec3() -> list[Spec]:
     """Sec. 3 and fig_accelerator_closed_form and fig_juno_intercept_vs_resolution: accelerators and reactors near the
-    vacuum limit (Eqs. 3.1-3.8)."""
+    vacuum limit (Eqs. 3.1-3.10)."""
     return [
-        Spec('sec3.lbl_agree', 270, 'generic beam minus Eq. (3.4), max over dCP', '0.1',
+        Spec('sec3.lbl_agree', 270, 'generic beam minus Eq. (3.6), max over dCP', '0.1',
              lambda r: np.max(np.abs(r['vacuum']['beam_b_line'] - r['vacuum']['beam_closed_line'])),
              check='bound'),
-        Spec('sec3.eq36_103p8', 259, '2 c12^2 Dm21 of Eq. (3.6)', '103.8', lambda r: LEAD),
+        Spec('sec3.eq36_103p8', 259, '2 c12^2 Dm21 of Eq. (3.8)', '103.8', lambda r: LEAD),
         Spec('sec3.eq36_11p6', 259, 's13 sin 2theta12 tan theta23 Dm21 at 0.561', '11.6',
              lambda r: np.sqrt(NUFIT.s13sq * 4 * NUFIT.s12sq * (1 - NUFIT.s12sq) * S23SQ / (1 - S23SQ))
              * NUFIT.dm21 * 1e6),
-        Spec('sec3.lbl_unequal', 283, 'NOvA-like nu only minus Eq. (3.4), dCP 177, 0 deg', 'a few',
+        Spec('sec3.lbl_unequal', 283, 'NOvA-like nu only minus Eq. (3.6), dCP 177, 0 deg', 'a few',
              lambda r: (beam_shift(r, 'nova_like', 0, 'nufit'), beam_shift(r, 'nova_like', 0, 'zero'))),
         Spec('sec3.dphi_above_2p5', 307, 'energy [MeV] of the maximum of Dm2_phi,ee', '2.5 MeV', dphi_peak),
-        Spec('sec3.juno_resolution', 307, 'sigma_E / E [%] of JUNO at 1 MeV from a, b, c (the paper quotes JUNO)',
-             '2.95%', lambda r: juno_resolution(1.0), check=''),
-        Spec('sec3.juno_b', 307, 'JUNO b at a_res = 2.61%', '25.7', lambda r: juno_b(r, juno.A_RES)),
-        Spec('sec3.juno_2to4', 307, 'JUNO b(a_res = 4%) - b(2%)', 'about 10',
+        Spec('sec3.juno_resolution', 307, 'sigma_E / E [%] of JUNO at 1 MeV from a, b, c', '2.94%',
+             lambda r: juno_resolution(1.0)),
+        Spec('sec3.juno_b', 307, 'JUNO b at 2.94% at 1 MeV', '25.7', lambda r: juno_b(r, juno.R1_RES)),
+        Spec('sec3.juno_2to4', 307, 'JUNO b(4% at 1 MeV) - b(2% at 1 MeV)', 'about 10',
              lambda r: juno_b(r, 0.04) - juno_b(r, 0.02), tol=1.0),
-        Spec('sec3.eeff_juno', 312, 'E_eff [MeV] at a_res = 2.61%', 'about 4 MeV', lambda r: e_eff(r, juno.A_RES),
+        Spec('sec3.eeff_juno', 312, 'E_eff [MeV] at 2.94% at 1 MeV', 'about 4 MeV', lambda r: e_eff(r, juno.R1_RES),
              tol=0.5),
     ]
 
@@ -678,7 +679,7 @@ def sec5() -> list[Spec]:
         Spec('sec5.dyb_on_line', 525, 'b of Daya Bay; the line 2 s12^2 Dm21', 'on its line',
              lambda r: (b_measured(r, 'Daya Bay 2022'), b_sbr() * 1e6)),
         Spec('sec5.juno_measured_b', 525, 'b of JUNO (207 days)', '27', lambda r: b_measured(r, 'JUNO 2026')),
-        Spec('sec5.juno_on_line', 525, 'JUNO line (a_res = 2.61%) at the measured x', 'consistent with the line',
+        Spec('sec5.juno_on_line', 525, 'JUNO line (2.94% at 1 MeV) at the measured x', 'consistent with the line',
              lambda r: juno_line(r, measured(r)['JUNO 2026'][0]), check=''),
         Spec('sec5.nova_in_app_band', 527, 'NOvA, T2K, T2K+NOvA in NOvA all band: (b, lo, hi) x 3', 'inside',
              lambda r: [v for label in ('NOvA 2025', 'T2K 2024', 'T2K + NOvA 2025')
@@ -750,7 +751,7 @@ def conclusions() -> list[Spec]:
 def app_a() -> list[Spec]:
     """App. A: inputs (Eq. A.1) and detector models (Eq. A.3)."""
     return [
-        Spec('appA.b_sbr', 23, '2 s12^2 Dm21, Eq. (3.7)', '46.0', lambda r: b_sbr() * 1e6),
+        Spec('appA.b_sbr', 23, '2 s12^2 Dm21, Eq. (3.9)', '46.0', lambda r: b_sbr() * 1e6),
         Spec('appA.b_lead', 24, '2 c12^2 Dm21', '103.8', lambda r: LEAD),
         Spec('appA.juno_abc', 39, 'a_res, b_res, c_res [%] of JUNO', '2.61%, 0.64%, 1.20%',
              lambda r: (100 * juno.A_RES, 100 * juno.B_RES, 100 * juno.C_RES)),
@@ -798,34 +799,34 @@ def app_b() -> list[Spec]:
     ]
 
 
-EEFF = {0.0: '3.5', 0.01: '3.6', 0.02: '3.9', juno.A_RES: '4.1', 0.05: '5.3', 0.08: '6.4'}    # a_res: E_eff [MeV]
+EEFF = {0.0: '3.5', 0.01: '3.5', 0.02: '3.8', juno.R1_RES: '4.1', 0.05: '5.0', 0.08: '6.1'}    # at 1 MeV: E_eff [MeV]
 
 
 def app_c() -> list[Spec]:
-    """App. C (fig_juno_effective_energy): accelerators in matter, JUNO resolution and effective energy (Eq. 3.8)."""
+    """App. C (fig_juno_effective_energy): accelerators in matter, JUNO resolution and effective energy (Eq. 3.10)."""
     def t2k_like(r):
         v = r['vacuum']
         return max(np.max(np.abs(v[f't2k_like_{tag}'] - v[f'closed_{tag}'])) for tag in ('nufit', 'zero'))
 
-    eeff_specs = [Spec(f'fig_juno_effective_energy.eeff.a{a * 100:.3g}', 237,
-                       f'E_eff [MeV] at a_res = {a * 100:.3g}%', q,
+    eeff_specs = [Spec(f'fig_juno_effective_energy.eeff.r{a * 100:.3g}', 237,
+                       f'E_eff [MeV] at {a * 100:.3g}% at 1 MeV', q,
                   lambda r, a=a: e_eff(r, a)) for a, q in EEFF.items()]
     return [
-        Spec('appC.eeff_0', 231, 'E_eff [MeV] at a_res = 0', '3.5 MeV', lambda r: e_eff(r, 0.0)),
-        Spec('appC.eeff_juno', 231, 'E_eff [MeV] at a_res = 2.61%', '4.1 MeV', lambda r: e_eff(r, juno.A_RES)),
-        Spec('appC.ares_cross', 231, 'a_res [%] where JUNO b equals the 4 MeV closed form', '2.3%',
+        Spec('appC.eeff_0', 231, 'E_eff [MeV] for a perfect resolution', '3.5 MeV', lambda r: e_eff(r, 0.0)),
+        Spec('appC.eeff_juno', 231, 'E_eff [MeV] at 2.94% at 1 MeV', '4.1 MeV', lambda r: e_eff(r, juno.R1_RES)),
+        Spec('appC.res_cross', 231, 'resolution at 1 MeV [%] where JUNO b equals the 4 MeV closed form', '2.6%',
              lambda r: 100 * np.interp(r['vacuum']['juno_b_closed_4mev'], r['vacuum']['juno_b'],
-                                       r['vacuum']['a_res'])),
-        Spec('appC.offset', 220, 'DeepCore without matter - Eq. (3.4), theta23 fixed and fitted (max)', 'below 1',
+                                       r['vacuum']['r1_res'])),
+        Spec('appC.offset', 220, 'DeepCore without matter - Eq. (3.6), theta23 fixed and fitted (max)', 'below 1',
              lambda r: (vacuum_limit(r, 'fixed'), vacuum_limit(r, 'fitted')), paper=(1.0,), check='bound'),
         Spec('appC.delta21_dyb', 220, 'Delta_21 at 1.65 km and 4 MeV', '0.04',
              lambda r: PHASE * NUFIT.dm21 * 1.65 / 4e-3),
         Spec('appC.delta21_810', 224, 'Delta_21 at 810 km and 2 GeV', '0.04', lambda r: PHASE * NUFIT.dm21 * 810 / 2),
-        Spec('appC.nova_like', 227, 'Eq. (3.4) minus NOvA-like beam, neutrinos only, dCP 177, 0 deg', '4 to 7',
+        Spec('appC.nova_like', 227, 'Eq. (3.6) minus NOvA-like beam, neutrinos only, dCP 177, 0 deg', '4 to 7',
              lambda r: (-beam_shift(r, 'nova_like', 0, 'nufit'), -beam_shift(r, 'nova_like', 0, 'zero'))),
-        Spec('appC.t2k_like', 227, 'T2K-like beam minus Eq. (3.4), all shares (max)', 'below 0.5', t2k_like,
+        Spec('appC.t2k_like', 227, 'T2K-like beam minus Eq. (3.6), all shares (max)', 'below 0.5', t2k_like,
              paper=(0.5,), check='bound'),
-        Spec('appC.equal_shares', 227, 'b - Eq. (3.4), equal shares, dCP 177, 0: NOvA-like, T2K-like',
+        Spec('appC.equal_shares', 227, 'b - Eq. (3.6), equal shares, dCP 177, 0: NOvA-like, T2K-like',
              'cancels for equal shares', lambda r: [beam_shift(r, beam, -1, tag) for beam in ('nova_like', 't2k_like')
                                                      for tag in ('nufit', 'zero')], check=''),
         Spec('appC.ahat_2gev', 227, 'A-hat at 2 GeV in the NOvA crust', '0.17',
@@ -834,10 +835,10 @@ def app_c() -> list[Spec]:
              'about 11%', nova_narrower, paper=(11.0,), tol=0.5),
         Spec('appC.nova_center', 227, 'NOvA dis band center minus closed form center (max)',
              'close to that of the closed form', nova_center, check=''),
-        Spec('appC.cf4_gap', 231, 'JUNO b at a_res = 2.61% minus the 4 MeV closed form', '2',
+        Spec('appC.cf4_gap', 231, 'JUNO b at 2.94% at 1 MeV minus the 4 MeV closed form', '2',
              lambda r: np.interp(juno.A_RES, r['vacuum']['a_res'], r['vacuum']['juno_b'])
              - float(r['vacuum']['juno_b_closed_4mev']), tol=0.5),
-        Spec('appC.eq38', 231, '|Eq. (3.8) - weighted bin average| of JUNO at a_res = 2.61%', '1',
+        Spec('appC.eq38', 231, '|Eq. (3.10) - weighted bin average| of JUNO at 2.94% at 1 MeV', '1',
              lambda r: eq38_gap(r, juno.A_RES), check='bound'),
         *eeff_specs,
     ]

@@ -28,7 +28,7 @@ REFERENCE = {    # id: (values, absolute tolerance)
     'sec3.eeff_juno': ((4.1490,), 0.005),
     'sec3.juno_resolution': ((2.94308,), 0.0001),
     'sec3.juno_b': ((25.662,), 0.01),
-    'sec3.juno_2to4': ((9.737,), 0.02),
+    'sec3.juno_2to4': ((9.8016,), 0.02),
     # Sec. 4: atmospheric neutrinos, fig_deepcore_dcp, fig_deepcore_resolution, fig_deepcore_energy_window, and
     # fig_deepcore_vs_orca6
     'sec4.msw_energy': ((5.7718, 9.5633), 0.001),
@@ -142,12 +142,12 @@ REFERENCE = {    # id: (values, absolute tolerance)
     'appC.equal_shares': ((-0.041, 0.092, -0.03, 0.046), 0.01),
     'appC.cf4_gap': ((2.0365,), 0.01),
     'appC.eq38': ((0.402,), 0.01),
-    'fig_juno_effective_energy.eeff.a0': ((3.4539,), 0.005),
-    'fig_juno_effective_energy.eeff.a1': ((3.5726,), 0.005),
-    'fig_juno_effective_energy.eeff.a2': ((3.8914,), 0.005),
-    'fig_juno_effective_energy.eeff.a2.61': ((4.1490,), 0.005),
-    'fig_juno_effective_energy.eeff.a5': ((5.278,), 0.005),
-    'fig_juno_effective_energy.eeff.a8': ((6.397,), 0.005),
+    'fig_juno_effective_energy.eeff.r0': ((3.4539,), 0.005),
+    'fig_juno_effective_energy.eeff.r1': ((3.5477,), 0.005),
+    'fig_juno_effective_energy.eeff.r2': ((3.8060,), 0.005),
+    'fig_juno_effective_energy.eeff.r2.94': ((4.1490,), 0.005),
+    'fig_juno_effective_energy.eeff.r5': ((5.0176,), 0.005),
+    'fig_juno_effective_energy.eeff.r8': ((6.1043,), 0.005),
     # App. D: the atmospheric solution in matter
     'appD.solar_phase_mumu': ((0.0143,), 0.002),
     'appD.first_term': ((1.29769,), 0.0001),
@@ -164,7 +164,7 @@ REFERENCE = {    # id: (values, absolute tolerance)
     'appE.nuisance': ((0.334, 1.172), 0.02),
     'appC.eeff_0': ((3.4539,), 0.005),
     'appC.eeff_juno': ((4.1490,), 0.005),
-    'appC.ares_cross': ((2.2702,), 0.005),
+    'appC.res_cross': ((2.5607,), 0.005),
     'appD.y_20_50': ((2.42052, 2.425704), 2e-05),
     'appE.repro_s23': ((0.5068, 0.0583), 0.001),
     'appE.repro_dm32': ((2.4107, 0.0779), 0.001),
@@ -229,7 +229,7 @@ def test_juno_resolution():
 
 
 def test_accelerator_closed_form():
-    """The generic beam in matter follows Eq. (3.4) to 0.1 x 1e-6 eV^2 over the true delta_CP (Sec. 3)."""
+    """The generic beam in matter follows Eq. (3.6) to 0.1 x 1e-6 eV^2 over the true delta_CP (Sec. 3)."""
     v = results('vacuum')
     assert np.allclose(v['beam_closed_line'], b_lbl(v['dcp_line'], DCP_IO) * 1e6)
     assert np.max(np.abs(v['beam_b_line'] - v['beam_closed_line'])) < 0.1

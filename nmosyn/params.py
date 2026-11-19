@@ -46,18 +46,18 @@ def u_mu(dcp, s23sq=S23SQ, p=NUFIT):
 
 
 def kappa_mu(dcp, s23sq=S23SQ, p=NUFIT):
-    """kappa_mu = |U_mu2|^2 / (|U_mu1|^2 + |U_mu2|^2) of Eq. (3.2), exact in the PDG parameterization (Eq. (3.5))."""
+    """kappa_mu = |U_mu2|^2 / (|U_mu1|^2 + |U_mu2|^2) of Eq. (3.2), exact in the PDG parameterization (Eq. (3.7))."""
     u1, u2 = u_mu(dcp, s23sq, p)
     return u2 / (u1 + u2)
 
 
 def b_sbr(p=NUFIT):
-    """Short-baseline reactor intercept 2 s12^2 Dm21, Eq. (3.7) [eV^2]."""
+    """Short-baseline reactor intercept 2 s12^2 Dm21, Eq. (3.9) [eV^2]."""
     return 2 * p.s12sq * p.dm21
 
 
 def b_lbl(dcp_no, dcp_io, s23sq_no=S23SQ, s23sq_io=S23SQ, p=NUFIT):
-    """Accelerator closed form (kappa_mu^NO + kappa_mu^IO) Dm21, Eq. (3.4) [eV^2]."""
+    """Accelerator closed form (kappa_mu^NO + kappa_mu^IO) Dm21, Eq. (3.6) [eV^2]."""
     return (kappa_mu(dcp_no, s23sq_no, p) + kappa_mu(dcp_io, s23sq_io, p)) * p.dm21
 
 

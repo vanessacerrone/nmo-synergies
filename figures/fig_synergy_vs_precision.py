@@ -3,7 +3,7 @@
 At the NuFIT splitting, for every true point (sin^2 theta23, delta_CP) of the bands of Sec. 5, the joint
 inverted-ordering fit of two experiments takes the closest points of their ranges of b (nmosyn.synergy.gap);
 each band spans the smallest and the largest synergy term over the true points. JUNO has one value of b, from
-its line at a_res = 2.61%. Reads results/bands.npz and results/vacuum.npz.
+its line at 2.94% at 1 MeV (a_res = 2.61%). Reads results/bands.npz and results/vacuum.npz.
 Run from the repository root: python -m figures.fig_synergy_vs_precision
 """
 import matplotlib.pyplot as plt

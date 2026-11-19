@@ -2,7 +2,7 @@
 
 Tabulated response of the public release (App. A.4), nu_mu disappearance, true Dm31_NO = 2.534e-3 eV^2 and sin^2 theta23
 = 0.561, fixed in both orderings. With matter: b at delta_CP^IO = 285 deg (line) and its range over delta_CP^IO (band).
-Without matter: b at delta_CP^IO = 285 deg. The accelerator closed form of Eq. (3.4) and the common part 2 c12^2 Dm21 of
+Without matter: b at delta_CP^IO = 285 deg. The accelerator closed form of Eq. (3.6) and the common part 2 c12^2 Dm21 of
 Eq. (4.1) are evaluated here. Reads results/deepcore.npz. Run from the repository root: python -m
 figures.fig_deepcore_dcp
 """

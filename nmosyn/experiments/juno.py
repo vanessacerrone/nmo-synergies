@@ -33,12 +33,13 @@ CORES = (
     ('Taishan 1', 4.6, 52.77),
     ('Taishan 2', 4.6, 52.64),
 )
-L_NOMINAL_KM = 52.5         # nominal baseline, used where Eq. (3.8) needs a single one
+L_NOMINAL_KM = 52.5         # nominal baseline, used where Eq. (3.10) needs a single one
 # rho * Y_e [g/cm^3] along the baselines: Y_e = 0.5, rho = 2.45 g/cm^3 for crust and sediment, arXiv:2204.13249 Sec. 2.2
 CRUST_RHOYE = 0.5 * 2.45
 E_MIN_MEV, E_MAX_MEV = 1.81, 9.0
 DE_TRUE_MEV = 1e-3          # integration step in true energy
 A_RES, B_RES, C_RES = 0.0261, 0.0064, 0.0120      # full simulation, arXiv:2405.17860, used in 2405.18008
+R1_RES = float(np.sqrt(A_RES ** 2 + B_RES ** 2 + C_RES ** 2))   # sigma_E / E at a prompt energy of 1 MeV, 2.94%
 MAX_CACHED = 4              # values of Dm31 whose counts are kept
 
 
@@ -75,8 +76,8 @@ class Juno:
 
     a_res, b_res, c_res: stochastic, constant, and noise terms of the resolution; rhoye = 0 gives vacuum;
     bin_mev: width of the analysis bins. The three terms are set independently, so Juno(a_res=0.0) keeps
-    b_res and c_res; the scan over a_res of the paper, with b_res and c_res scaled with a_res, is
-    Juno.scaled(a_res).
+    b_res and c_res; the scan of the paper scales the three terms together, Juno.scaled(a_res), and labels it by
+    the resolution at 1 MeV, Juno.at_1mev(r1_res).
     """
 
     def __init__(self, a_res: float = A_RES, b_res: float = B_RES, c_res: float = C_RES, p: Params = NUFIT,
@@ -100,6 +101,12 @@ class Juno:
         """Model with b_res and c_res scaled by the same factor as a_res, 0.64% and 1.20% at a_res = 2.61%, so
         that the resolution is perfect at a_res = 0 (Sec. 3, App. A.2, App. C.3)."""
         return cls(a_res, B_RES * a_res / A_RES, C_RES * a_res / A_RES, **kwargs)
+
+    @classmethod
+    def at_1mev(cls, r1_res: float, **kwargs) -> 'Juno':
+        """Juno.scaled labeled by the resolution r1_res = sigma_E / E at a prompt energy of 1 MeV: the three terms
+        scaled by r1_res / R1_RES, so R1_RES = 2.94% is the model of the full simulation (Sec. 3, App. C.3)."""
+        return cls.scaled(A_RES * r1_res / R1_RES, **kwargs)
 
     def survival(self, y: float) -> np.ndarray:
         """P_ee of antineutrinos at the true energies e_true, averaged over the cores by rate (App. A.2)."""
@@ -125,7 +132,7 @@ class Juno:
         """Wrong-ordering solution y for NO Asimov data at x: Eq. (2.3), solved by the Gauss-Newton iteration of
         App. B.3.
 
-        The iteration starts at the short-baseline closed form, y = -x + 2 s12^2 Dm21 (Eq. 3.7).
+        The iteration starts at the short-baseline closed form, y = -x + 2 s12^2 Dm21 (Eq. 3.9).
         """
         return gauss_newton(self._counts, self._counts(x), -x + b_sbr(self.p))
 
@@ -135,7 +142,7 @@ class Juno:
         return omega / omega.sum()
 
     def solar_phase_average(self, x: float, y: float, l_km: float = L_NOMINAL_KM) -> float:
-        """<Dm2_phi,ee>_omega of Eq. (3.8): Dm2_phi,ee at the bin centers, weights omega_i at y [eV^2]."""
+        """<Dm2_phi,ee>_omega of Eq. (3.10): Dm2_phi,ee at the bin centers, weights omega_i at y [eV^2]."""
         return float(np.sum(self.omega(x, y) * dm2_phi_ee(self.e_mev, l_km, self.p)))
 
 
@@ -147,7 +154,7 @@ def effective_energy(avg: float, p: Params = NUFIT, l_km: float = L_NOMINAL_KM) 
 
 
 def b_mbr(e_mev: float = 4.0, p: Params = NUFIT, l_km: float = L_NOMINAL_KM) -> float:
-    """Eq. (3.8) with the solar phase at one energy, 2 s12^2 Dm21 - Dm2_phi,ee(E) (App. C.3).
+    """Eq. (3.10) with the solar phase at one energy, 2 s12^2 Dm21 - Dm2_phi,ee(E) (App. C.3).
 
     Returned in eV^2, like params.b_sbr; times 1e6 it is the intercept b in 1e-6 eV^2.
     """

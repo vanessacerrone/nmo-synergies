@@ -80,7 +80,7 @@ def test_constant_density_is_one_layer_split_in_two():
 
 
 class Beam:
-    """nu_mu disappearance at 810 km in vacuum, Gaussian spectrum, 10% resolution: the closed form of Eq. (3.4)."""
+    """nu_mu disappearance at 810 km in vacuum, Gaussian spectrum, 10% resolution: the closed form of Eq. (3.6)."""
 
     def __init__(self):
         from scipy.special import erf
@@ -111,7 +111,7 @@ def test_gauss_newton_is_the_minimum_and_the_bin_average(beam):
     y_i, omega = average.bin_solutions(model, data, y)
     ok = np.isfinite(y_i)
     assert abs(np.sum(omega[ok] * y_i[ok]) / np.sum(omega[ok]) - y) < 1e-12
-    assert abs((y + X0) - b_lbl(3.0, 4.9, 0.561, 0.561)) < 0.05e-6     # vacuum closed form, Eq. (3.4)
+    assert abs((y + X0) - b_lbl(3.0, 4.9, 0.561, 0.561)) < 0.05e-6     # vacuum closed form, Eq. (3.6)
 
 
 def test_harmonics_are_exact(beam):
@@ -121,7 +121,7 @@ def test_harmonics_are_exact(beam):
 
 
 def test_kappa_first_order():
-    """kappa_mu of Eq. (3.4) is c12^2 - A_CP, up to terms of order s13^2."""
+    """kappa_mu of Eq. (3.6) is c12^2 - A_CP, up to terms of order s13^2."""
     d = np.linspace(0, 2 * np.pi, 13)
     a_cp = np.cos(d) * np.sqrt(NUFIT.s13sq) * 2 * np.sqrt(NUFIT.s12sq * (1 - NUFIT.s12sq)) * np.sqrt(0.561 / 0.439)
     assert np.max(np.abs(kappa_mu(d, 0.561) - (1 - NUFIT.s12sq - a_cp))) < 3 * NUFIT.s13sq
