@@ -10,8 +10,8 @@ authors:
     given-names: Marco
     affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
 version: 1.3.0
-# doi: 10.5281/zenodo.XXXXXXX            # the Zenodo DOI, added at archiving
-# date-released: 2026-MM-DD             # the date of the tag, added at archiving
+doi: 10.5281/zenodo.24373967
+date-released: 2026-11-19
 license: MIT
 repository-code: "https://github.com/vanessacerrone/nmo-synergies"
 keywords:
@@ -29,7 +29,6 @@ preferred-citation:
     - family-names: Grassi
       given-names: Marco
       affiliation: "Dipartimento di Fisica e Astronomia, Università di Padova and INFN Sezione di Padova"
-  journal: "Journal of High Energy Physics"
   year: 2026
   identifiers:
     - type: other
